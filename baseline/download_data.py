@@ -11,7 +11,7 @@ import sys
 import shutil
 import subprocess
 from tqdm import tqdm
-import zipfile
+import py7zr  # 替换zipfile，用于处理.7z文件
 
 # 确保输出目录存在
 from config import INPUT_DIR, DATA_DIR, OUTPUT_DIR
@@ -41,6 +41,22 @@ def install_gdown_if_needed():
             return True
         except Exception as e:
             print(f"安装gdown时出错: {e}")
+            return False
+
+def install_py7zr_if_needed():
+    """检查并安装py7zr"""
+    try:
+        import py7zr
+        version = py7zr.__version__
+        print(f"已安装py7zr版本: {version}")
+        return True
+    except ImportError:
+        print("py7zr库未安装，正在安装...")
+        try:
+            subprocess.run([sys.executable, "-m", "pip", "install", "py7zr"], check=True)
+            return True
+        except Exception as e:
+            print(f"安装py7zr时出错: {e}")
             return False
 
 def download_folder(folder_id, output_dir):
@@ -107,19 +123,22 @@ def download_file(file_id, output_path, desc):
         print(f"下载{desc}时出错: {e}")
         return False
 
-def extract_zip(zip_path, extract_to):
-    """解压ZIP文件"""
+def extract_7z(archive_path, extract_to):
+    """解压7z文件"""
     print(f"正在解压文件到 {extract_to}...")
     try:
-        with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-            # 获取文件数量用于进度显示
-            total_files = len(zip_ref.namelist())
+        # 打开7z文件
+        with py7zr.SevenZipFile(archive_path, mode='r') as archive:
+            # 获取文件列表用于显示进度
+            file_list = archive.getnames()
+            total_files = len(file_list)
             
             # 使用tqdm显示进度
             with tqdm(total=total_files) as pbar:
-                for file in zip_ref.namelist():
-                    zip_ref.extract(file, extract_to)
-                    pbar.update(1)
+                # 解压所有文件
+                archive.extractall(path=extract_to)
+                # 由于py7zr不支持单文件提取的回调，我们一次性更新进度条
+                pbar.update(total_files)
         
         print("解压完成！")
         return True
@@ -138,6 +157,11 @@ def main():
         print("安装gdown失败，无法继续。")
         return
     
+    # 安装py7zr
+    if not install_py7zr_if_needed():
+        print("安装py7zr失败，无法继续。")
+        return
+    
     # 下载选项菜单
     print("\n请选择要下载的内容:")
     print("1. 所有文件（原始数据集、预处理数据和模型）")
@@ -154,13 +178,13 @@ def main():
     # 下载原始MPST数据集
     if choice in [1, 2]:
         print("\n==== 下载原始MPST数据集 ====")
-        original_dataset_path = "MPST_v2.zip"
+        original_dataset_path = "MPST_v2.7z"  # 改为.7z扩展名
         success = download_file(ORIGINAL_DATASET_FILE_ID, original_dataset_path, "原始MPST数据集")
         if success:
             # 解压到INPUT_DIR
-            if extract_zip(original_dataset_path, "."):
+            if extract_7z(original_dataset_path, "."):
                 print(f"原始数据集已解压到 {INPUT_DIR} 目录")
-                # 删除ZIP文件
+                # 删除7z文件
                 os.remove(original_dataset_path)
     
     # 下载预处理数据文件
