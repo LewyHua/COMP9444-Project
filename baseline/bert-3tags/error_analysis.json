@@ -1,0 +1,3040 @@
+[
+  {
+    "text": "Matuschek's, a gift store in Budapest, is the workplace of Alfred Kralik (James Stewart) and the newly hi Ed\nKlara Novak (Margaret Sullavan). At work they constantly irritate each other, but this dail...",
+    "actual_tags": [
+      "romantic"
+    ],
+    "false_positives": [
+      "dramatic",
+      "psychedelic"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "dramatic": 0.34582197666168213,
+        "psychedelic": 0.3409535586833954
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "Hours after the end of the previous game and the death of the traitorous General Shepard, the remnants of Task Force 141 (TF141) Captain John Price (Billy Murray), John Soap MacTavish (Kevin McKidd) a...",
+    "actual_tags": [
+      "good versus evil"
+    ],
+    "false_positives": [
+      "murder",
+      "violence",
+      "revenge"
+    ],
+    "false_negatives": [
+      "good versus evil"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.46457234025001526,
+        "violence": 0.7891886234283447,
+        "revenge": 0.2190113514661789
+      },
+      "fn": {
+        "good versus evil": 0.03762506693601608
+      }
+    }
+  },
+  {
+    "text": "This creepy and scary story centers around The Smurl family of Pittston, Pennsylvania. After they move to a duplex, they begin experiencing strange things. Dark shadows move about the house. Mrs Smurl...",
+    "actual_tags": [
+      "horror",
+      "haunting",
+      "paranormal"
+    ],
+    "false_positives": [
+      "murder",
+      "violence"
+    ],
+    "false_negatives": [
+      "horror",
+      "haunting"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.25596415996551514,
+        "violence": 0.17356827855110168
+      },
+      "fn": {
+        "horror": 0.04421333596110344,
+        "haunting": 0.04676457494497299
+      }
+    }
+  },
+  {
+    "text": "The film opens in an Anchorage motel room in 1983, where 17-year-old Cindy Paulson (Vanessa Hudgens) is handcuffed and screaming for help. She is rescued by an Anchorage Police Department patrol offic...",
+    "actual_tags": [
+      "murder",
+      "dramatic"
+    ],
+    "false_positives": [
+      "romantic",
+      "flashback"
+    ],
+    "false_negatives": [
+      "dramatic"
+    ],
+    "probabilities": {
+      "fp": {
+        "romantic": 0.18270306289196014,
+        "flashback": 0.15062911808490753
+      },
+      "fn": {
+        "dramatic": 0.001465018605813384
+      }
+    }
+  },
+  {
+    "text": "15 years agoWe see two young kids, named Emma and Adam, sitting on a bench looking uncomfortable while other teenagers are making out at a summer camp. Adam cries, revealing that he's attending summer...",
+    "actual_tags": [
+      "romantic",
+      "flashback",
+      "boring",
+      "adult comedy",
+      "cute",
+      "entertaining"
+    ],
+    "false_positives": [
+      "comedy"
+    ],
+    "false_negatives": [
+      "flashback",
+      "boring",
+      "adult comedy",
+      "cute"
+    ],
+    "probabilities": {
+      "fp": {
+        "comedy": 0.5696343183517456
+      },
+      "fn": {
+        "flashback": 0.2547416090965271,
+        "boring": 0.20722952485084534,
+        "adult comedy": 0.07996995747089386,
+        "cute": 0.15476876497268677
+      }
+    }
+  },
+  {
+    "text": "The movie opens with eerie music and a darkened screen followed by screams and moans and splotches of paint thrown at the screen. Each ghost and its number appears with the number thirteen as a \"?\". T...",
+    "actual_tags": [
+      "murder",
+      "revenge"
+    ],
+    "false_positives": [
+      "cult",
+      "violence"
+    ],
+    "false_negatives": [
+      "revenge"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.5016909837722778,
+        "violence": 0.8147321939468384
+      },
+      "fn": {
+        "revenge": 0.27415308356285095
+      }
+    }
+  },
+  {
+    "text": "Six friends, Christian, David, Kate, Johnny, Sara, and Melody, are traveling in an R.V. to get to the wedding of their friend, Kelly, in Galveston, Texas. However they become lost in a small town call...",
+    "actual_tags": [
+      "cult",
+      "murder",
+      "flashback"
+    ],
+    "false_positives": [
+      "violence",
+      "paranormal"
+    ],
+    "false_negatives": [
+      "cult",
+      "flashback"
+    ],
+    "probabilities": {
+      "fp": {
+        "violence": 0.2698015570640564,
+        "paranormal": 0.24001382291316986
+      },
+      "fn": {
+        "cult": 0.13676109910011292,
+        "flashback": 0.05390382558107376
+      }
+    }
+  },
+  {
+    "text": "The introduction shows the young Dalai Lama receiving gifts from Tibetan monks. One gift he receives, an ornate music box, has special meaning to him, as he is still a young child.The progress of Hein...",
+    "actual_tags": [
+      "violence",
+      "historical"
+    ],
+    "false_positives": [
+      "murder",
+      "romantic",
+      "flashback"
+    ],
+    "false_negatives": [
+      "violence",
+      "historical"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.25431734323501587,
+        "romantic": 0.19789226353168488,
+        "flashback": 0.2945111393928528
+      },
+      "fn": {
+        "violence": 0.047650713473558426,
+        "historical": 0.07377749681472778
+      }
+    }
+  },
+  {
+    "text": "An anti-government union leader's only son Sakthivel is arrested by the police to find his whereabouts. They trick Sakthivel into believing them as his well-wishers and release him. When Sakthivel mee...",
+    "actual_tags": [
+      "murder",
+      "violence",
+      "romantic",
+      "cruelty",
+      "revenge"
+    ],
+    "false_positives": [],
+    "false_negatives": [
+      "romantic",
+      "cruelty"
+    ],
+    "probabilities": {
+      "fp": {},
+      "fn": {
+        "romantic": 0.10117924213409424,
+        "cruelty": 0.0028535558376461267
+      }
+    }
+  },
+  {
+    "text": "In 1944, Allied troops have defeated the Germans after the Battle of the Bulge. In Malmedy, Belgium, they find and uncover the frozen bodies of over 70 American soldiers who were held prisoners and ki...",
+    "actual_tags": [
+      "murder",
+      "flashback"
+    ],
+    "false_positives": [
+      "violence",
+      "revenge"
+    ],
+    "false_negatives": [
+      "flashback"
+    ],
+    "probabilities": {
+      "fp": {
+        "violence": 0.7057047486305237,
+        "revenge": 0.17090922594070435
+      },
+      "fn": {
+        "flashback": 0.10189491510391235
+      }
+    }
+  },
+  {
+    "text": "Late one night in future Gotham, several members of the infamous Jokerz gang - Bonk (Henry Rollins), Chucko (Don Harvey), Woof (Don Harvey), a human spliced with hyena DNA, Ghoul (Michael Rosenbaum), ...",
+    "actual_tags": [
+      "cult",
+      "gothic",
+      "murder",
+      "violence",
+      "flashback",
+      "psychedelic",
+      "good versus evil",
+      "comedy",
+      "brainwashing",
+      "insanity",
+      "science fiction"
+    ],
+    "false_positives": [],
+    "false_negatives": [
+      "cult",
+      "gothic",
+      "flashback",
+      "psychedelic",
+      "comedy",
+      "brainwashing",
+      "insanity",
+      "science fiction"
+    ],
+    "probabilities": {
+      "fp": {},
+      "fn": {
+        "cult": 0.6169394254684448,
+        "gothic": 0.10277702659368515,
+        "flashback": 0.34314802289009094,
+        "psychedelic": 0.31368061900138855,
+        "comedy": 0.45655766129493713,
+        "brainwashing": 0.019333990290760994,
+        "insanity": 0.05459713563323021,
+        "science fiction": 0.23252306878566742
+      }
+    }
+  },
+  {
+    "text": "Scenes in red appear only in the 2003 Director's Cut. Scenes in blue appear only in the 1979 Theatrical Edition.The opening credits appear in front of a large planet with rings. Cut to the far reaches...",
+    "actual_tags": [
+      "atmospheric",
+      "cult",
+      "gothic",
+      "horror",
+      "murder",
+      "violence",
+      "action",
+      "mystery",
+      "suspenseful",
+      "boring",
+      "science fiction",
+      "claustrophobic",
+      "dark"
+    ],
+    "false_positives": [],
+    "false_negatives": [
+      "atmospheric",
+      "gothic",
+      "horror",
+      "action",
+      "mystery",
+      "suspenseful",
+      "boring",
+      "science fiction",
+      "claustrophobic",
+      "dark"
+    ],
+    "probabilities": {
+      "fp": {},
+      "fn": {
+        "atmospheric": 0.05535921826958656,
+        "gothic": 0.09624867886304855,
+        "horror": 0.059775665402412415,
+        "action": 0.15272483229637146,
+        "mystery": 0.055096570402383804,
+        "suspenseful": 0.2742232084274292,
+        "boring": 0.11317816376686096,
+        "science fiction": 0.22734108567237854,
+        "claustrophobic": 0.008598621003329754,
+        "dark": 0.05586784705519676
+      }
+    }
+  },
+  {
+    "text": "After a series of strange events around the world connected by variances in the Earth's electromagnetic field, scientists, led by Dr. Josh Keyes (Aaron Eckhart), a geology professor, and Conrad Zimsky...",
+    "actual_tags": [
+      "psychedelic"
+    ],
+    "false_positives": [
+      "cult",
+      "murder",
+      "violence"
+    ],
+    "false_negatives": [
+      "psychedelic"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.28538161516189575,
+        "murder": 0.451652467250824,
+        "violence": 0.5435495972633362
+      },
+      "fn": {
+        "psychedelic": 0.13630059361457825
+      }
+    }
+  },
+  {
+    "text": "In New York City, the Bonwit Teller department store is destroyed by a bomb during the morning commute. The New York City Police Department receive a call from \"Simon\" ordering them that suspended pol...",
+    "actual_tags": [
+      "cult",
+      "murder",
+      "violence",
+      "action",
+      "revenge",
+      "flashback",
+      "mystery",
+      "suspenseful",
+      "comedy",
+      "humor",
+      "insanity"
+    ],
+    "false_positives": [],
+    "false_negatives": [
+      "cult",
+      "action",
+      "flashback",
+      "mystery",
+      "suspenseful",
+      "comedy",
+      "humor",
+      "insanity"
+    ],
+    "probabilities": {
+      "fp": {},
+      "fn": {
+        "cult": 0.11716943979263306,
+        "action": 0.008279381319880486,
+        "flashback": 0.03339966759085655,
+        "mystery": 0.008173327893018723,
+        "suspenseful": 0.03944900631904602,
+        "comedy": 0.027898738160729408,
+        "humor": 0.007672072388231754,
+        "insanity": 0.004897404927760363
+      }
+    }
+  },
+  {
+    "text": "The film (set from 1953~1960) begins with an unknown entity (voiced by Keith David) explaining how it has witnessed the evolution of life on Earth:Like all things on this hurtling sphere, I emerged fr...",
+    "actual_tags": [
+      "violence"
+    ],
+    "false_positives": [
+      "murder",
+      "psychedelic"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "murder": 0.31415295600891113,
+        "psychedelic": 0.365005224943161
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "Note: the events in this movie take place at the same time during the events in the previous movie \"The Bourne Ultimatum\", thus making this movie a spin-off to the Bourne trilogy.Aaron Cross (Jeremy R...",
+    "actual_tags": [
+      "murder",
+      "violence",
+      "action",
+      "flashback",
+      "brainwashing"
+    ],
+    "false_positives": [
+      "revenge"
+    ],
+    "false_negatives": [
+      "action",
+      "flashback",
+      "brainwashing"
+    ],
+    "probabilities": {
+      "fp": {
+        "revenge": 0.434239000082016
+      },
+      "fn": {
+        "action": 0.033183518797159195,
+        "flashback": 0.29802843928337097,
+        "brainwashing": 0.003042015712708235
+      }
+    }
+  },
+  {
+    "text": "The film is set in a small Oregon town, where a brutal serial killer nicknamed the 'Oregon undertaker' has been murdering and mutilating young women.\nCharlie (David Schwimmer) is an ex-teacher turned ...",
+    "actual_tags": [
+      "cult",
+      "murder",
+      "violence",
+      "sadist",
+      "neo noir",
+      "comedy",
+      "entertaining",
+      "dark"
+    ],
+    "false_positives": [
+      "revenge"
+    ],
+    "false_negatives": [
+      "cult",
+      "sadist",
+      "neo noir",
+      "comedy",
+      "entertaining",
+      "dark"
+    ],
+    "probabilities": {
+      "fp": {
+        "revenge": 0.32551082968711853
+      },
+      "fn": {
+        "cult": 0.23489195108413696,
+        "sadist": 0.09539704024791718,
+        "neo noir": 0.1507555991411209,
+        "comedy": 0.11329665780067444,
+        "entertaining": 0.0009458167478442192,
+        "dark": 0.008037842810153961
+      }
+    }
+  },
+  {
+    "text": "The first thing we hear is Dom Hemingway (Jude Law) asking, \"Is my cock not exquisite?\" He continues to praise his cock, saying outlandish things like it ought to win the first ever Nobel Peace Prize ...",
+    "actual_tags": [
+      "revenge"
+    ],
+    "false_positives": [
+      "murder",
+      "violence",
+      "flashback"
+    ],
+    "false_negatives": [
+      "revenge"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.8575405478477478,
+        "violence": 0.7667017579078674,
+        "flashback": 0.5845627188682556
+      },
+      "fn": {
+        "revenge": 0.45761728286743164
+      }
+    }
+  },
+  {
+    "text": "Mel (Peyton List) and Jules (Cameron Goodman) are best friends returning to Los Angeles from a trip in Mexico. Seth (James Snyder) and Matt (Dave Power) arrive and introduce themselves to them. Jules ...",
+    "actual_tags": [
+      "murder"
+    ],
+    "false_positives": [
+      "flashback",
+      "comedy"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "flashback": 0.1406247466802597,
+        "comedy": 0.18001225590705872
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "On August 22, 1972, first-time crook Sonny Wortzik (Al Pacino), his friend Salvatore \"Sal\" Naturale (John Cazale), and Stevie (Gary Springer) attempt to rob the First Brooklyn Savings Bank. The plan i...",
+    "actual_tags": [
+      "atmospheric",
+      "comedy"
+    ],
+    "false_positives": [
+      "murder",
+      "violence"
+    ],
+    "false_negatives": [
+      "atmospheric"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.7414891123771667,
+        "violence": 0.37995147705078125
+      },
+      "fn": {
+        "atmospheric": 0.001100574736483395
+      }
+    }
+  },
+  {
+    "text": "The 1941 version of the Wolf Man opens with the Universal Picture airplane and globe logo and theme, followed by title and credits. The featured players are shown with the actor's name and character's...",
+    "actual_tags": [
+      "cult",
+      "gothic",
+      "murder",
+      "good versus evil",
+      "haunting"
+    ],
+    "false_positives": [
+      "violence"
+    ],
+    "false_negatives": [
+      "gothic",
+      "good versus evil",
+      "haunting"
+    ],
+    "probabilities": {
+      "fp": {
+        "violence": 0.10467305034399033
+      },
+      "fn": {
+        "gothic": 0.06437890231609344,
+        "good versus evil": 0.042980339378118515,
+        "haunting": 0.016595972701907158
+      }
+    }
+  },
+  {
+    "text": "In Michael Moore's discussions with various figures, including South Park co-creator Matt Stone, the National Rifle Association's then-president Charlton Heston, and musician Marilyn Manson, he seeks ...",
+    "actual_tags": [
+      "murder",
+      "violence",
+      "stupid",
+      "brainwashing",
+      "satire"
+    ],
+    "false_positives": [
+      "revenge"
+    ],
+    "false_negatives": [
+      "stupid",
+      "brainwashing",
+      "satire"
+    ],
+    "probabilities": {
+      "fp": {
+        "revenge": 0.6733890771865845
+      },
+      "fn": {
+        "stupid": 0.0011833744356408715,
+        "brainwashing": 0.0037492304109036922,
+        "satire": 0.006189149338752031
+      }
+    }
+  },
+  {
+    "text": "The Mummy-Tomb of the Dragon Emperor\nThis is a walkthrough I wrote myself for the latest videogame version of the latest addition to the popular Mummy franchise. I have done as good a job that I can e...",
+    "actual_tags": [
+      "violence",
+      "suspenseful"
+    ],
+    "false_positives": [
+      "murder",
+      "flashback"
+    ],
+    "false_negatives": [
+      "suspenseful"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.23027729988098145,
+        "flashback": 0.11404204368591309
+      },
+      "fn": {
+        "suspenseful": 0.017271995544433594
+      }
+    }
+  },
+  {
+    "text": "IntroductionMickey Knox and his wife Mallory go to a roadside caf\u00e9 in the New Mexico desert. They appear to be normal customers, with Mickey eating key lime pie and Mallory dancing to rock 'n' roll on...",
+    "actual_tags": [
+      "cult",
+      "murder",
+      "violence",
+      "romantic",
+      "cruelty",
+      "revenge",
+      "sadist",
+      "flashback",
+      "neo noir",
+      "psychedelic",
+      "comedy",
+      "insanity",
+      "satire"
+    ],
+    "false_positives": [],
+    "false_negatives": [
+      "cult",
+      "romantic",
+      "cruelty",
+      "sadist",
+      "flashback",
+      "neo noir",
+      "psychedelic",
+      "comedy",
+      "insanity",
+      "satire"
+    ],
+    "probabilities": {
+      "fp": {},
+      "fn": {
+        "cult": 0.4467073380947113,
+        "romantic": 0.036951277405023575,
+        "cruelty": 0.042090244591236115,
+        "sadist": 0.16148695349693298,
+        "flashback": 0.1842469573020935,
+        "neo noir": 0.15833447873592377,
+        "psychedelic": 0.01386700477451086,
+        "comedy": 0.20470663905143738,
+        "insanity": 0.024332420900464058,
+        "satire": 0.010850530117750168
+      }
+    }
+  },
+  {
+    "text": "A young Hispanic woman prays to the Virgin Mary, gripping her arm and lighting candles. \"I know I failed you, but please Lord, please help me,\" she says.\nSomeone joins her, she's glad they came back a...",
+    "actual_tags": [
+      "murder"
+    ],
+    "false_positives": [
+      "violence",
+      "revenge"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "violence": 0.965478241443634,
+        "revenge": 0.6717376708984375
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "The story revolves around 'Hugo', a one-of-a-kind creature that lives deep within the jungle. He is snatched away from his ideal lifestyle by a selfish actress and her movie-director husband to be the...",
+    "actual_tags": [
+      "psychedelic",
+      "insanity"
+    ],
+    "false_positives": [
+      "romantic"
+    ],
+    "false_negatives": [
+      "insanity"
+    ],
+    "probabilities": {
+      "fp": {
+        "romantic": 0.10961085557937622
+      },
+      "fn": {
+        "insanity": 0.0033891324419528246
+      }
+    }
+  },
+  {
+    "text": "Scientist Rohit Mehra lives with his son Krishna \"Krrish\" Mehra (both played by Hrithik Roshan) in Mumbai. Krishna is married to Priya (Priyanka Chopra) who works as a journalist for Aaj Tak. Rohit wo...",
+    "actual_tags": [
+      "romantic",
+      "good versus evil"
+    ],
+    "false_positives": [
+      "cult",
+      "murder",
+      "violence"
+    ],
+    "false_negatives": [
+      "romantic",
+      "good versus evil"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.29977670311927795,
+        "murder": 0.32137155532836914,
+        "violence": 0.5904318690299988
+      },
+      "fn": {
+        "romantic": 0.10495060682296753,
+        "good versus evil": 0.18556882441043854
+      }
+    }
+  },
+  {
+    "text": "Season 1Following the events of Breaking Bad, Saul Goodman is living under the assumed name Gene in Omaha, Nebraska and managing a Cinnabon. That night he watches a tape of television ads made when he...",
+    "actual_tags": [
+      "comedy"
+    ],
+    "false_positives": [
+      "murder",
+      "violence"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "murder": 0.6090723872184753,
+        "violence": 0.32360079884529114
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "Two years after the events in The Bourne Identity, Jason Bourne (Matt Damon) and his girlfriend, Marie Kreutz (Franka Potente), are living on the beach in Goa, India. Bourne is beginning to recover so...",
+    "actual_tags": [
+      "violence",
+      "action",
+      "revenge",
+      "flashback",
+      "suspenseful",
+      "boring"
+    ],
+    "false_positives": [
+      "murder"
+    ],
+    "false_negatives": [
+      "action",
+      "revenge",
+      "flashback",
+      "boring"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.9692660570144653
+      },
+      "fn": {
+        "action": 0.19426923990249634,
+        "revenge": 0.5409567952156067,
+        "flashback": 0.5916061997413635,
+        "boring": 0.1911451816558838
+      }
+    }
+  },
+  {
+    "text": "The great, muscle-warrior Hercules (Reg Park) returns to his homeland in Icalia, where he is confronted by several hired assasins. But he defeats them with the help of his loyal friend Thesius. Upon a...",
+    "actual_tags": [
+      "violence",
+      "good versus evil"
+    ],
+    "false_positives": [
+      "revenge"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "revenge": 0.2687836289405823
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "=== Characters ===\nThe main character of the game is Edward Kenway (Matt Ryan), a Welsh privateer-turned-pirate and eventual member of the Assassin Order. Edward is the father of Haytham Kenway, and g...",
+    "actual_tags": [
+      "action"
+    ],
+    "false_positives": [
+      "murder",
+      "violence",
+      "revenge"
+    ],
+    "false_negatives": [
+      "action"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.25018906593322754,
+        "violence": 0.7964887619018555,
+        "revenge": 0.25912848114967346
+      },
+      "fn": {
+        "action": 0.16912351548671722
+      }
+    }
+  },
+  {
+    "text": "Doug Martin is a successful country-western singer who returns to his rural North Carolina home town of Stuartsville with the hope of restoring a country twang to his \"citified\" voice. During his driv...",
+    "actual_tags": [
+      "murder"
+    ],
+    "false_positives": [
+      "romantic"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "romantic": 0.1284920871257782
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "The aurora was seen in the starry sky high above snow covered mountains.Trekking through the steep snow was Adam (Aaron Eckhart). In his arms was the limp body of his creator, Victor Frankenstein (Ade...",
+    "actual_tags": [
+      "murder",
+      "violence",
+      "revenge",
+      "flashback",
+      "psychedelic",
+      "good versus evil",
+      "paranormal"
+    ],
+    "false_positives": [
+      "cult",
+      "gothic"
+    ],
+    "false_negatives": [
+      "revenge"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.13664796948432922,
+        "gothic": 0.11747247725725174
+      },
+      "fn": {
+        "revenge": 0.09429571777582169
+      }
+    }
+  },
+  {
+    "text": "John Henry Irons (Shaquille O'Neal) is a weapons designer who invents high-tech laser guns and protective armor for the United States military. One soldier, Nathaniel Burke (Judd Nelson), decides to s...",
+    "actual_tags": [
+      "violence",
+      "blaxploitation"
+    ],
+    "false_positives": [
+      "cult",
+      "murder",
+      "action",
+      "revenge",
+      "flashback",
+      "good versus evil"
+    ],
+    "false_negatives": [
+      "blaxploitation"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.2699616551399231,
+        "murder": 0.4160461127758026,
+        "action": 0.17221592366695404,
+        "revenge": 0.43204858899116516,
+        "flashback": 0.145619735121727,
+        "good versus evil": 0.37917348742485046
+      },
+      "fn": {
+        "blaxploitation": 0.006151024252176285
+      }
+    }
+  },
+  {
+    "text": "In this sequel to the previous Star Wars movie, Episode IV: A New Hope, the opening crawl reveals that after the destruction of the Death Star, the Rebels were forced to evacuate their base on the Yav...",
+    "actual_tags": [
+      "cult",
+      "violence",
+      "action",
+      "mystery",
+      "tragedy",
+      "good versus evil",
+      "fantasy",
+      "dark"
+    ],
+    "false_positives": [
+      "murder",
+      "romantic",
+      "revenge",
+      "flashback",
+      "boring",
+      "comedy",
+      "humor",
+      "science fiction"
+    ],
+    "false_negatives": [
+      "mystery",
+      "tragedy",
+      "fantasy",
+      "dark"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.5665622353553772,
+        "romantic": 0.16312889754772186,
+        "revenge": 0.5118571519851685,
+        "flashback": 0.317726731300354,
+        "boring": 0.11267833411693573,
+        "comedy": 0.11393909156322479,
+        "humor": 0.10772795975208282,
+        "science fiction": 0.15737995505332947
+      },
+      "fn": {
+        "mystery": 0.015079956501722336,
+        "tragedy": 0.06146889552474022,
+        "fantasy": 0.09666737914085388,
+        "dark": 0.015819646418094635
+      }
+    }
+  },
+  {
+    "text": "In 1982, Forrest Gump recounts his life story to strangers who sit next to him on a bench in Savannah, Georgia.\nOn his first day of school, in Greenbow, Alabama, Forrest meets a girl named Jenny Curra...",
+    "actual_tags": [
+      "cult",
+      "romantic",
+      "feel-good",
+      "inspiring",
+      "stupid",
+      "action",
+      "dramatic",
+      "flashback",
+      "psychedelic",
+      "sentimental",
+      "historical",
+      "comedy",
+      "cute",
+      "entertaining",
+      "humor",
+      "psychological",
+      "melodrama",
+      "historical fiction",
+      "clever",
+      "whimsical"
+    ],
+    "false_positives": [
+      "murder",
+      "violence",
+      "revenge"
+    ],
+    "false_negatives": [
+      "romantic",
+      "feel-good",
+      "inspiring",
+      "stupid",
+      "action",
+      "dramatic",
+      "flashback",
+      "psychedelic",
+      "sentimental",
+      "historical",
+      "comedy",
+      "cute",
+      "entertaining",
+      "humor",
+      "psychological",
+      "melodrama",
+      "historical fiction",
+      "clever",
+      "whimsical"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.5195216536521912,
+        "violence": 0.6019466519355774,
+        "revenge": 0.21959766745567322
+      },
+      "fn": {
+        "romantic": 0.034341465681791306,
+        "feel-good": 5.876007708138786e-05,
+        "inspiring": 0.0017203718889504671,
+        "stupid": 0.00012840685667470098,
+        "action": 0.01789877749979496,
+        "dramatic": 0.0014461280079558492,
+        "flashback": 0.07940644770860672,
+        "psychedelic": 0.0026841952931135893,
+        "sentimental": 0.00039235063013620675,
+        "historical": 0.013564279302954674,
+        "comedy": 0.02302158996462822,
+        "cute": 3.077383735217154e-05,
+        "entertaining": 0.0008585627074353397,
+        "humor": 0.005752277560532093,
+        "psychological": 0.00016315342509187758,
+        "melodrama": 0.018331293016672134,
+        "historical fiction": 0.006894899066537619,
+        "clever": 0.00012244493700563908,
+        "whimsical": 1.1548943803063594e-05
+      }
+    }
+  },
+  {
+    "text": "Doris Day insisted on the considerable talents of relatively unknown director Norman Jewison and drama and action movie lead man James Garner for this physical comedy which features relatively late mo...",
+    "actual_tags": [
+      "comedy"
+    ],
+    "false_positives": [
+      "romantic",
+      "melodrama"
+    ],
+    "false_negatives": [
+      "comedy"
+    ],
+    "probabilities": {
+      "fp": {
+        "romantic": 0.671828031539917,
+        "melodrama": 0.10301060974597931
+      },
+      "fn": {
+        "comedy": 0.06797661632299423
+      }
+    }
+  },
+  {
+    "text": "Mario Ruoppolo is a young man in an insular Italian fishing village where time moves slowly. Since Mario's seasickness doesn't allow him to fish, he is given the job of postman, delivering mail on a b...",
+    "actual_tags": [
+      "boring"
+    ],
+    "false_positives": [
+      "romantic",
+      "flashback",
+      "psychedelic"
+    ],
+    "false_negatives": [
+      "boring"
+    ],
+    "probabilities": {
+      "fp": {
+        "romantic": 0.3670082688331604,
+        "flashback": 0.22646187245845795,
+        "psychedelic": 0.21963803470134735
+      },
+      "fn": {
+        "boring": 0.07828111201524734
+      }
+    }
+  },
+  {
+    "text": "In the opening scene, set at a juvenile correctional facility in Los Angeles in the year 1998, a fight breaks out between Adonis \"Donnie\" Johnson (Alex Henderson) and another boy after the boy says so...",
+    "actual_tags": [
+      "flashback"
+    ],
+    "false_positives": [
+      "cult",
+      "murder",
+      "violence",
+      "revenge",
+      "sadist",
+      "suspenseful",
+      "neo noir",
+      "comedy"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "cult": 0.21280322968959808,
+        "murder": 0.8992912173271179,
+        "violence": 0.9510316848754883,
+        "revenge": 0.6011000275611877,
+        "sadist": 0.13284221291542053,
+        "suspenseful": 0.15913279354572296,
+        "neo noir": 0.2710675597190857,
+        "comedy": 0.20627087354660034
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "It is the summer of 1989 in Chicago, Illinois. Barack Obama and Michelle Robinson are getting ready for not a date. She's been very clear that this is not a date, despite him asking her to go on a dat...",
+    "actual_tags": [
+      "romantic",
+      "historical"
+    ],
+    "false_positives": [
+      "flashback",
+      "melodrama"
+    ],
+    "false_negatives": [
+      "historical"
+    ],
+    "probabilities": {
+      "fp": {
+        "flashback": 0.17473189532756805,
+        "melodrama": 0.12223027646541595
+      },
+      "fn": {
+        "historical": 0.01796180196106434
+      }
+    }
+  },
+  {
+    "text": "Diana Guzman is a Brooklyn teenager whose hot temper gets her into trouble at school as she repeatedly starts fights with other students. Her frustration stems from her unhappy home life; she lives in...",
+    "actual_tags": [
+      "cult",
+      "gothic",
+      "murder",
+      "violence",
+      "sadist",
+      "good versus evil",
+      "realism",
+      "plot twist",
+      "science fiction"
+    ],
+    "false_positives": [
+      "romantic",
+      "revenge",
+      "flashback",
+      "comedy"
+    ],
+    "false_negatives": [
+      "gothic",
+      "sadist",
+      "good versus evil",
+      "realism",
+      "plot twist",
+      "science fiction"
+    ],
+    "probabilities": {
+      "fp": {
+        "romantic": 0.2563084065914154,
+        "revenge": 0.25622686743736267,
+        "flashback": 0.35262224078178406,
+        "comedy": 0.11554013937711716
+      },
+      "fn": {
+        "gothic": 0.002037615515291691,
+        "sadist": 0.030876167118549347,
+        "good versus evil": 0.024330053478479385,
+        "realism": 0.054530300199985504,
+        "plot twist": 0.010875718668103218,
+        "science fiction": 0.00665659224614501
+      }
+    }
+  },
+  {
+    "text": "Valerie [Jaroslava Schallerov\u00e1] has just come of age with her first bleeding. Babischka [Helena Anyzov\u00e1] says\nthat it's time to put away her magic earrings and attend to the\nmissionaries who are comin...",
+    "actual_tags": [
+      "cult",
+      "sadist",
+      "flashback",
+      "psychedelic",
+      "fantasy",
+      "allegory"
+    ],
+    "false_positives": [
+      "gothic",
+      "murder",
+      "good versus evil",
+      "haunting",
+      "paranormal",
+      "insanity"
+    ],
+    "false_negatives": [
+      "sadist",
+      "flashback",
+      "allegory"
+    ],
+    "probabilities": {
+      "fp": {
+        "gothic": 0.45289698243141174,
+        "murder": 0.2312682420015335,
+        "good versus evil": 0.12756165862083435,
+        "haunting": 0.1281677633523941,
+        "paranormal": 0.1773393154144287,
+        "insanity": 0.12024065852165222
+      },
+      "fn": {
+        "sadist": 0.005615678150206804,
+        "flashback": 0.06878574937582016,
+        "allegory": 0.029269402846693993
+      }
+    }
+  },
+  {
+    "text": "Images of haywire outside a prison. It's a rainy night. A police car arrives. The new inmate in cell 6 used to be a lawyer, Lawson Russell (Cuba Gooding Jr.). He speaks in the voiceover and says that ...",
+    "actual_tags": [
+      "murder"
+    ],
+    "false_positives": [
+      "violence",
+      "revenge",
+      "flashback"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "violence": 0.20530006289482117,
+        "revenge": 0.14097370207309723,
+        "flashback": 0.17353737354278564
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "Reporter Tom Lewis (Tom Harper) interviews a Georgian university professor, Professor Bauer (Ed Lynch), who saw a UFO last night. He saw a thunder of light and a fast-moving object. Mrs Acree (Ida Acr...",
+    "actual_tags": [
+      "psychedelic"
+    ],
+    "false_positives": [
+      "murder",
+      "flashback"
+    ],
+    "false_negatives": [
+      "psychedelic"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.42606040835380554,
+        "flashback": 0.10390587151050568
+      },
+      "fn": {
+        "psychedelic": 0.027637921273708344
+      }
+    }
+  },
+  {
+    "text": "\"Through a Glass Darkly,\" originally titled \"The Wallpaper,\" is the first part in a film trilogy, the start to a new direction taken by Ingmar Bergman: \"chamber films,\" so named for their analogy to c...",
+    "actual_tags": [
+      "atmospheric",
+      "bleak",
+      "insanity"
+    ],
+    "false_positives": [
+      "cult",
+      "murder",
+      "romantic",
+      "dramatic",
+      "flashback",
+      "psychedelic",
+      "depressing",
+      "boring",
+      "sentimental",
+      "storytelling",
+      "comedy",
+      "fantasy",
+      "philosophical",
+      "cute",
+      "entertaining",
+      "psychological",
+      "absurd",
+      "satire",
+      "thought-provoking",
+      "whimsical",
+      "avant garde"
+    ],
+    "false_negatives": [
+      "bleak"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.283078670501709,
+        "murder": 0.12890690565109253,
+        "romantic": 0.4103850722312927,
+        "dramatic": 0.31202811002731323,
+        "flashback": 0.31036248803138733,
+        "psychedelic": 0.792112410068512,
+        "depressing": 0.17931176722049713,
+        "boring": 0.3274242877960205,
+        "sentimental": 0.25561583042144775,
+        "storytelling": 0.2593345046043396,
+        "comedy": 0.33099856972694397,
+        "fantasy": 0.2549625039100647,
+        "philosophical": 0.19801153242588043,
+        "cute": 0.10558313876390457,
+        "entertaining": 0.1508912295103073,
+        "psychological": 0.1588667333126068,
+        "absurd": 0.11313877254724503,
+        "satire": 0.18503959476947784,
+        "thought-provoking": 0.127700537443161,
+        "whimsical": 0.17550750076770782,
+        "avant garde": 0.13512638211250305
+      },
+      "fn": {
+        "bleak": 0.051720406860113144
+      }
+    }
+  },
+  {
+    "text": "The film begins as married New York City businessman Frank Herlihy (Greg Kinnear) is accidentally killed while trying to buy an apartment for his mistress. Shortly afterward, cynical dentist Bertram P...",
+    "actual_tags": [
+      "entertaining"
+    ],
+    "false_positives": [
+      "cult",
+      "murder",
+      "flashback",
+      "haunting",
+      "paranormal",
+      "insanity"
+    ],
+    "false_negatives": [
+      "entertaining"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.14027352631092072,
+        "murder": 0.5604721307754517,
+        "flashback": 0.10823492705821991,
+        "haunting": 0.13598869740962982,
+        "paranormal": 0.30983150005340576,
+        "insanity": 0.12102115899324417
+      },
+      "fn": {
+        "entertaining": 0.005067325197160244
+      }
+    }
+  },
+  {
+    "text": "The film opens with Lara Croft (Angelina Jolie) in an Egyptian tomb, seeking a diamond at one end of a chamber. As she approaches she is attacked by a large robot. After an intense chase and battle, s...",
+    "actual_tags": [
+      "cult",
+      "murder",
+      "action",
+      "boring"
+    ],
+    "false_positives": [
+      "violence",
+      "revenge",
+      "flashback",
+      "good versus evil"
+    ],
+    "false_negatives": [
+      "cult",
+      "action",
+      "boring"
+    ],
+    "probabilities": {
+      "fp": {
+        "violence": 0.5351760387420654,
+        "revenge": 0.14869216084480286,
+        "flashback": 0.11224205791950226,
+        "good versus evil": 0.10829495638608932
+      },
+      "fn": {
+        "cult": 0.0930984616279602,
+        "action": 0.009357723407447338,
+        "boring": 0.002280649496242404
+      }
+    }
+  },
+  {
+    "text": "Charlie Cox (Matt Frewer) is a divorced writer for Highways Magazine, which is based in Los Angeles. Charlie and his daughter Joleen (Drew Barrymore) are on their way home from a cross country vacatio...",
+    "actual_tags": [
+      "murder",
+      "romantic",
+      "prank"
+    ],
+    "false_positives": [
+      "violence",
+      "revenge",
+      "flashback"
+    ],
+    "false_negatives": [
+      "romantic",
+      "prank"
+    ],
+    "probabilities": {
+      "fp": {
+        "violence": 0.15648682415485382,
+        "revenge": 0.13986992835998535,
+        "flashback": 0.12962956726551056
+      },
+      "fn": {
+        "romantic": 0.04929704591631889,
+        "prank": 0.0012829462066292763
+      }
+    }
+  },
+  {
+    "text": "Its April 16th, 1945. Soviet soldier Georg Hecker (Jaecki Schwarz) is announcing to German troops over a loudspeaker system that the war is over and they should surrender to the Russian army. Ich bin ...",
+    "actual_tags": [
+      "murder"
+    ],
+    "false_positives": [
+      "violence",
+      "revenge",
+      "flashback"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "violence": 0.7285464406013489,
+        "revenge": 0.24054989218711853,
+        "flashback": 0.14367273449897766
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "The film begins with stock footage scenes of warfare in Vietnam. An American soldier named Frankie is seen running alone through the jungle as his voice narrates. He explains that he \"goes back there ...",
+    "actual_tags": [
+      "cult",
+      "murder",
+      "violence",
+      "flashback",
+      "tragedy"
+    ],
+    "false_positives": [
+      "revenge",
+      "suspenseful",
+      "comedy"
+    ],
+    "false_negatives": [
+      "tragedy"
+    ],
+    "probabilities": {
+      "fp": {
+        "revenge": 0.16563484072685242,
+        "suspenseful": 0.12617652118206024,
+        "comedy": 0.10672270506620407
+      },
+      "fn": {
+        "tragedy": 0.03438160568475723
+      }
+    }
+  },
+  {
+    "text": "Kurt Russell stars as coach Herb Brooks in a true story of the 1980 U.S. Olympic ice hockey team winning the gold medal by defeating the powerful Soviet Union and Finland teams at Lake Placid. Brooks ...",
+    "actual_tags": [
+      "inspiring"
+    ],
+    "false_positives": [
+      "murder",
+      "romantic",
+      "flashback"
+    ],
+    "false_negatives": [
+      "inspiring"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.1485861837863922,
+        "romantic": 0.11872533708810806,
+        "flashback": 0.13628925383090973
+      },
+      "fn": {
+        "inspiring": 0.007407966535538435
+      }
+    }
+  },
+  {
+    "text": "On Romulus members of the Romulan Imperial Senate debate whether to accept the terms of peace and alliance with the Reman rebel leader Shinzon. The Remans are a slave race of the Romulan Empire, used ...",
+    "actual_tags": [
+      "violence",
+      "flashback"
+    ],
+    "false_positives": [
+      "cult",
+      "murder",
+      "action",
+      "revenge",
+      "suspenseful",
+      "good versus evil",
+      "comedy"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "cult": 0.3500958979129791,
+        "murder": 0.7479758262634277,
+        "action": 0.5595072507858276,
+        "revenge": 0.6034142374992371,
+        "suspenseful": 0.11870552599430084,
+        "good versus evil": 0.38058558106422424,
+        "comedy": 0.11025022715330124
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "Elizabeth Halsey is an immoral, gold-digging Chicago-area middle school English teacher who curses at her students, drinks alcohol heavily, smokes marijuana, and shows movies while sleeping through cl...",
+    "actual_tags": [
+      "romantic",
+      "revenge",
+      "comedy",
+      "adult comedy",
+      "absurd",
+      "intrigue"
+    ],
+    "false_positives": [
+      "cult",
+      "murder",
+      "violence"
+    ],
+    "false_negatives": [
+      "romantic",
+      "revenge",
+      "adult comedy",
+      "absurd",
+      "intrigue"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.17757388949394226,
+        "murder": 0.4104445278644562,
+        "violence": 0.11084380000829697
+      },
+      "fn": {
+        "romantic": 0.036165498197078705,
+        "revenge": 0.06673986464738846,
+        "adult comedy": 0.017578603699803352,
+        "absurd": 0.00898751337081194,
+        "intrigue": 0.0020829688291996717
+      }
+    }
+  },
+  {
+    "text": "We begin with an aerial view of the hotels in Las Vegas, before settling on one called the Shangri-La. Inside one gaming area, the patrons all seem to be winning. Joe, a floor boss, picks up a phone a...",
+    "actual_tags": [
+      "murder",
+      "violence",
+      "psychedelic",
+      "storytelling"
+    ],
+    "false_positives": [
+      "cult",
+      "revenge",
+      "flashback",
+      "suspenseful",
+      "neo noir",
+      "comedy",
+      "humor"
+    ],
+    "false_negatives": [
+      "psychedelic",
+      "storytelling"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.4690096974372864,
+        "revenge": 0.24682126939296722,
+        "flashback": 0.18244661390781403,
+        "suspenseful": 0.3116934299468994,
+        "neo noir": 0.13653576374053955,
+        "comedy": 0.3764039874076843,
+        "humor": 0.1107366755604744
+      },
+      "fn": {
+        "psychedelic": 0.0470065213739872,
+        "storytelling": 0.01771281287074089
+      }
+    }
+  },
+  {
+    "text": "Berlin, Germany. 1928Stanley Crawford (Colin Firth) is a British illusionist/magical debunker performing a show under the guise of Wei Ling Soo, a Chinese magician. He does such tricks as making an el...",
+    "actual_tags": [
+      "romantic",
+      "philosophical",
+      "cute",
+      "plot twist"
+    ],
+    "false_positives": [
+      "cult",
+      "gothic",
+      "horror",
+      "murder",
+      "psychedelic",
+      "paranormal",
+      "comedy",
+      "insanity"
+    ],
+    "false_negatives": [
+      "romantic",
+      "philosophical",
+      "cute",
+      "plot twist"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.3626723885536194,
+        "gothic": 0.10948730260133743,
+        "horror": 0.16457386314868927,
+        "murder": 0.45458984375,
+        "psychedelic": 0.22432713210582733,
+        "paranormal": 0.1992201954126358,
+        "comedy": 0.33074042201042175,
+        "insanity": 0.10074009001255035
+      },
+      "fn": {
+        "romantic": 0.04978826269507408,
+        "philosophical": 0.01597888022661209,
+        "cute": 0.0018890316132456064,
+        "plot twist": 0.03107537515461445
+      }
+    }
+  },
+  {
+    "text": "The film opens with an animated prologue revealing the origins of leprechauns, stating that they were summoned by a king to protect his gold. After the death of the king the Leprechauns returned to th...",
+    "actual_tags": [
+      "cult",
+      "paranormal"
+    ],
+    "false_positives": [
+      "violence",
+      "revenge",
+      "good versus evil"
+    ],
+    "false_negatives": [
+      "cult",
+      "paranormal"
+    ],
+    "probabilities": {
+      "fp": {
+        "violence": 0.3101117014884949,
+        "revenge": 0.16100576519966125,
+        "good versus evil": 0.4570865035057068
+      },
+      "fn": {
+        "cult": 0.09976717084646225,
+        "paranormal": 0.00690470403060317
+      }
+    }
+  },
+  {
+    "text": "NOTE: \"Thrall\" is from an Old Norse word meaning \"slave.\" Slavery was\nsupported by Norse mythology, which claimed that thralls had a separate\nancestry through the god Rig. In Thralls, a thrall is a ha...",
+    "actual_tags": [
+      "murder",
+      "violence",
+      "flashback",
+      "pornographic"
+    ],
+    "false_positives": [
+      "cult",
+      "gothic",
+      "revenge",
+      "psychedelic",
+      "good versus evil",
+      "paranormal"
+    ],
+    "false_negatives": [
+      "pornographic"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.16883347928524017,
+        "gothic": 0.1224701851606369,
+        "revenge": 0.10849475860595703,
+        "psychedelic": 0.16952458024024963,
+        "good versus evil": 0.1410166621208191,
+        "paranormal": 0.1719171404838562
+      },
+      "fn": {
+        "pornographic": 0.00977987702935934
+      }
+    }
+  },
+  {
+    "text": "It is 1936 and a money runner is carrying the week's take -- $11,000 -- from an illegal gambling outfit in Joliet, Illinois, to the main office. On the way, three men con him by replacing his money wi...",
+    "actual_tags": [
+      "cult",
+      "murder",
+      "inspiring",
+      "revenge",
+      "depressing",
+      "boring",
+      "entertaining",
+      "plot twist",
+      "clever"
+    ],
+    "false_positives": [
+      "violence",
+      "suspenseful",
+      "neo noir"
+    ],
+    "false_negatives": [
+      "cult",
+      "inspiring",
+      "depressing",
+      "boring",
+      "entertaining",
+      "plot twist",
+      "clever"
+    ],
+    "probabilities": {
+      "fp": {
+        "violence": 0.2610245645046234,
+        "suspenseful": 0.11747505515813828,
+        "neo noir": 0.2586054801940918
+      },
+      "fn": {
+        "cult": 0.08546672761440277,
+        "inspiring": 0.00024158519227057695,
+        "depressing": 0.002880105748772621,
+        "boring": 0.0018249386921525002,
+        "entertaining": 0.0003423616290092468,
+        "plot twist": 0.0058169858530163765,
+        "clever": 8.644126501167193e-05
+      }
+    }
+  },
+  {
+    "text": "A British ghostwriter (Ewan McGregor) is hired by the publishing firm Rhinehart, Inc. to complete the autobiography of former Prime Minister Adam Lang (Pierce Brosnan). His predecessor and Lang's aide...",
+    "actual_tags": [
+      "atmospheric",
+      "murder",
+      "dramatic",
+      "mystery",
+      "suspenseful",
+      "boring",
+      "intrigue"
+    ],
+    "false_positives": [],
+    "false_negatives": [
+      "atmospheric",
+      "dramatic",
+      "mystery",
+      "suspenseful",
+      "boring",
+      "intrigue"
+    ],
+    "probabilities": {
+      "fp": {},
+      "fn": {
+        "atmospheric": 0.00136658176779747,
+        "dramatic": 0.0012360609835013747,
+        "mystery": 0.018409792333841324,
+        "suspenseful": 0.05322408676147461,
+        "boring": 0.003127898322418332,
+        "intrigue": 0.011290038004517555
+      }
+    }
+  },
+  {
+    "text": "Katie (Jenny McCarthy) and Becca (Pamela Anderson) are talking about a tape, which Katie believes is a sex tape, but Becca refers to a cursed tape (The Ring). After several odd occurrences, they both ...",
+    "actual_tags": [
+      "cult",
+      "horror",
+      "stupid",
+      "paranormal",
+      "comedy",
+      "adult comedy",
+      "bleak",
+      "humor"
+    ],
+    "false_positives": [
+      "murder",
+      "violence",
+      "revenge",
+      "flashback",
+      "suspenseful",
+      "psychedelic"
+    ],
+    "false_negatives": [
+      "stupid",
+      "paranormal",
+      "adult comedy",
+      "bleak"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.6133722066879272,
+        "violence": 0.6455453038215637,
+        "revenge": 0.17617833614349365,
+        "flashback": 0.1484096199274063,
+        "suspenseful": 0.15480175614356995,
+        "psychedelic": 0.13470342755317688
+      },
+      "fn": {
+        "stupid": 0.022741779685020447,
+        "paranormal": 0.07361876219511032,
+        "adult comedy": 0.018613507971167564,
+        "bleak": 0.015890099108219147
+      }
+    }
+  },
+  {
+    "text": "Charly Gordon (Cliff Robertson) is a retarded male adult. He enjoys playing on the playground with other kids. He goes to night school, and his teacher, Miss Alice Kinnian (Claire Bloom) asks him to c...",
+    "actual_tags": [
+      "prank",
+      "tragedy",
+      "philosophical",
+      "psychological"
+    ],
+    "false_positives": [
+      "psychedelic",
+      "comedy"
+    ],
+    "false_negatives": [
+      "prank",
+      "tragedy",
+      "philosophical",
+      "psychological"
+    ],
+    "probabilities": {
+      "fp": {
+        "psychedelic": 0.35508739948272705,
+        "comedy": 0.20561999082565308
+      },
+      "fn": {
+        "prank": 0.007703501731157303,
+        "tragedy": 0.0017848756397143006,
+        "philosophical": 0.011174226179718971,
+        "psychological": 0.004352276679128408
+      }
+    }
+  },
+  {
+    "text": "Arthur (Russell Brand) is a drunken playboy who revels in party and drinking. On the way to a dress party, he and Bitterman (Luis Guzman) dress as Batman and Robin, get arrested, then bail out everyon...",
+    "actual_tags": [
+      "stupid",
+      "entertaining"
+    ],
+    "false_positives": [
+      "cult",
+      "murder",
+      "romantic",
+      "revenge",
+      "flashback",
+      "mystery",
+      "suspenseful",
+      "comedy",
+      "satire"
+    ],
+    "false_negatives": [
+      "stupid",
+      "entertaining"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.16488231718540192,
+        "murder": 0.46744775772094727,
+        "romantic": 0.24358852207660675,
+        "revenge": 0.11098608374595642,
+        "flashback": 0.19118422269821167,
+        "mystery": 0.10138261318206787,
+        "suspenseful": 0.1007760614156723,
+        "comedy": 0.46359875798225403,
+        "satire": 0.10395242273807526
+      },
+      "fn": {
+        "stupid": 0.007731121964752674,
+        "entertaining": 0.06854263693094254
+      }
+    }
+  },
+  {
+    "text": "Dr. Frederick Frankenstein (Gene Wilder) is a lecturing physician at an American medical school and engaged to the tightly wound socialite Elizabeth (Madeline Kahn). He becomes exasperated when anyone...",
+    "actual_tags": [
+      "cult",
+      "gothic",
+      "comedy",
+      "humor",
+      "satire"
+    ],
+    "false_positives": [
+      "murder",
+      "violence",
+      "revenge",
+      "paranormal"
+    ],
+    "false_negatives": [
+      "comedy",
+      "humor",
+      "satire"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.5419399738311768,
+        "violence": 0.12838536500930786,
+        "revenge": 0.11123821139335632,
+        "paranormal": 0.10380459576845169
+      },
+      "fn": {
+        "comedy": 0.03535788133740425,
+        "humor": 0.00619333004578948,
+        "satire": 0.010436602868139744
+      }
+    }
+  },
+  {
+    "text": "\"Neuropsychologists say that 'we don't have one brain. We have\nthree--one that is human, built over another that is mammalian, built over\nyet another that's reptilian. So, when a psychiatrist asks you...",
+    "actual_tags": [
+      "cult",
+      "murder",
+      "romantic",
+      "storytelling"
+    ],
+    "false_positives": [
+      "violence",
+      "flashback",
+      "psychedelic",
+      "comedy",
+      "insanity"
+    ],
+    "false_negatives": [
+      "storytelling"
+    ],
+    "probabilities": {
+      "fp": {
+        "violence": 0.114753857254982,
+        "flashback": 0.290510356426239,
+        "psychedelic": 0.30459001660346985,
+        "comedy": 0.10430176556110382,
+        "insanity": 0.13465559482574463
+      },
+      "fn": {
+        "storytelling": 0.061552491039037704
+      }
+    }
+  },
+  {
+    "text": "As night falls over Coney Island, Cleon (Dorsey Wright), leader of the Warriors, meets up with eight of his most trusted lieutenants to travel by subway to the faraway Bronx. They will be attending an...",
+    "actual_tags": [
+      "cult",
+      "murder",
+      "violence",
+      "revenge",
+      "suspenseful",
+      "realism"
+    ],
+    "false_positives": [
+      "action",
+      "flashback",
+      "good versus evil",
+      "comedy",
+      "humor"
+    ],
+    "false_negatives": [
+      "suspenseful",
+      "realism"
+    ],
+    "probabilities": {
+      "fp": {
+        "action": 0.4517776370048523,
+        "flashback": 0.15485920011997223,
+        "good versus evil": 0.39572370052337646,
+        "comedy": 0.16539226472377777,
+        "humor": 0.11586103588342667
+      },
+      "fn": {
+        "suspenseful": 0.09715992957353592,
+        "realism": 0.009679985232651234
+      }
+    }
+  },
+  {
+    "text": "The opening scene is of a man who has presumably been tortured by some French military personnel. The commander (Col. Mathieu played by Jean Martin) enters and tells the man to put on a French uniform...",
+    "actual_tags": [
+      "cult",
+      "murder",
+      "violence",
+      "revenge",
+      "sadist",
+      "flashback",
+      "realism",
+      "historical",
+      "avant garde"
+    ],
+    "false_positives": [],
+    "false_negatives": [
+      "cult",
+      "sadist",
+      "flashback",
+      "realism",
+      "historical",
+      "avant garde"
+    ],
+    "probabilities": {
+      "fp": {},
+      "fn": {
+        "cult": 0.024937575682997704,
+        "sadist": 0.0036150668747723103,
+        "flashback": 0.09829532355070114,
+        "realism": 0.0009983525378629565,
+        "historical": 0.0005609518266282976,
+        "avant garde": 0.0007918291375972331
+      }
+    }
+  },
+  {
+    "text": "Eons ago, Bor, father of Odin, clashes with the Dark Elf Malekith, who seeks to unleash a weapon known as the Aether on the nine realms. After conquering Malekith's forces, including enhanced warriors...",
+    "actual_tags": [
+      "murder",
+      "violence",
+      "revenge",
+      "flashback",
+      "psychedelic",
+      "good versus evil",
+      "humor"
+    ],
+    "false_positives": [
+      "cult",
+      "romantic",
+      "action",
+      "fantasy",
+      "science fiction"
+    ],
+    "false_negatives": [
+      "psychedelic",
+      "humor"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.28437289595603943,
+        "romantic": 0.10211248695850372,
+        "action": 0.5170145630836487,
+        "fantasy": 0.13774363696575165,
+        "science fiction": 0.13988590240478516
+      },
+      "fn": {
+        "psychedelic": 0.09458472579717636,
+        "humor": 0.050578877329826355
+      }
+    }
+  },
+  {
+    "text": "NOTE: Sequel to \"Prince of Darkness\" (1966).A year has passed since the demise of Dracula, buried under the ice in the river that flows past his castle. Ernst Mueller [Rupert Davies], monsignor of the...",
+    "actual_tags": [
+      "cult",
+      "gothic",
+      "revenge"
+    ],
+    "false_positives": [
+      "murder",
+      "violence",
+      "good versus evil",
+      "paranormal"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "murder": 0.3969963788986206,
+        "violence": 0.23614145815372467,
+        "good versus evil": 0.18599700927734375,
+        "paranormal": 0.18687447905540466
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "The film begins with a flashback set to the first film, with Gandalf battling the Balrog on the Bridge of Khazad-d\u00fbm, but this time continues from Gandalf's perspective, with the scene continuing to f...",
+    "actual_tags": [
+      "atmospheric",
+      "cult",
+      "violence",
+      "romantic",
+      "action",
+      "flashback",
+      "mystery",
+      "tragedy",
+      "good versus evil",
+      "boring",
+      "fantasy",
+      "melodrama",
+      "anti war"
+    ],
+    "false_positives": [
+      "murder",
+      "revenge"
+    ],
+    "false_negatives": [
+      "atmospheric",
+      "romantic",
+      "mystery",
+      "tragedy",
+      "boring",
+      "melodrama",
+      "anti war"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.16981247067451477,
+        "revenge": 0.25532782077789307
+      },
+      "fn": {
+        "atmospheric": 0.022228388115763664,
+        "romantic": 0.09430807828903198,
+        "mystery": 0.008318020962178707,
+        "tragedy": 0.013311963528394699,
+        "boring": 0.042938798666000366,
+        "melodrama": 0.0012363765854388475,
+        "anti war": 0.006953165866434574
+      }
+    }
+  },
+  {
+    "text": "It is World War II. After a battle, a tank operator is found in a destroyed Soviet tank. Miraculously recovering from burns on 90 percent of his body, he suffers amnesia and cannot recall his identity...",
+    "actual_tags": [
+      "murder"
+    ],
+    "false_positives": [
+      "romantic",
+      "flashback"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "romantic": 0.10606415569782257,
+        "flashback": 0.1342429667711258
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "The movie opens in a mental hospital where a teenage girl by the name of Su-Mi is suffering from shock and psychosis. She is being questioned by a doctor who shows her pictures of her family and asks ...",
+    "actual_tags": [
+      "atmospheric",
+      "cult",
+      "gothic",
+      "violence",
+      "romantic",
+      "cruelty",
+      "flashback",
+      "suspenseful",
+      "psychedelic",
+      "tragedy",
+      "insanity",
+      "claustrophobic",
+      "psychological"
+    ],
+    "false_positives": [
+      "horror",
+      "murder",
+      "revenge",
+      "haunting",
+      "paranormal"
+    ],
+    "false_negatives": [
+      "atmospheric",
+      "tragedy",
+      "claustrophobic",
+      "psychological"
+    ],
+    "probabilities": {
+      "fp": {
+        "horror": 0.14408144354820251,
+        "murder": 0.7108173966407776,
+        "revenge": 0.1758062094449997,
+        "haunting": 0.1572248339653015,
+        "paranormal": 0.2045191526412964
+      },
+      "fn": {
+        "atmospheric": 0.08720258623361588,
+        "tragedy": 0.05375666916370392,
+        "claustrophobic": 0.010783758014440536,
+        "psychological": 0.09430843591690063
+      }
+    }
+  },
+  {
+    "text": "Scooby Doo, Shaggy, Daphne, Velma, Fred, and the Mystery Machine are\nvacationing in Australia. After sight-seeing in Sydney, they head for the\nOutback to attend the Vampire Rock Music Festival. Legend...",
+    "actual_tags": [
+      "horror",
+      "psychedelic"
+    ],
+    "false_positives": [
+      "cult",
+      "gothic",
+      "murder",
+      "violence",
+      "revenge",
+      "good versus evil",
+      "paranormal",
+      "comedy"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "cult": 0.3221539855003357,
+        "gothic": 0.10129231959581375,
+        "murder": 0.14818572998046875,
+        "violence": 0.1700005978345871,
+        "revenge": 0.11397163569927216,
+        "good versus evil": 0.3343832492828369,
+        "paranormal": 0.1306687742471695,
+        "comedy": 0.1348612904548645
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "The film opens with Army Reserve Sergeant First Class Troy Barlow (Wahlberg) shooting an Iraqi Regular Army soldier pointing his weapon at Troy after seemingly trying to surrender following the end of...",
+    "actual_tags": [
+      "murder",
+      "violence",
+      "suspenseful",
+      "comedy",
+      "humor",
+      "satire",
+      "thought-provoking",
+      "anti war"
+    ],
+    "false_positives": [
+      "cult",
+      "revenge",
+      "flashback"
+    ],
+    "false_negatives": [
+      "suspenseful",
+      "comedy",
+      "humor",
+      "satire",
+      "thought-provoking",
+      "anti war"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.1254902184009552,
+        "revenge": 0.3898894190788269,
+        "flashback": 0.22256532311439514
+      },
+      "fn": {
+        "suspenseful": 0.07616845518350601,
+        "comedy": 0.07200547307729721,
+        "humor": 0.029166368767619133,
+        "satire": 0.004855783190578222,
+        "thought-provoking": 0.00019582457025535405,
+        "anti war": 0.007480316329747438
+      }
+    }
+  },
+  {
+    "text": "Spoiler text There are many events throughout the whole movie which included search and suspicion of characters around story but they are not narrated here Kali is a 10 year old daughter out of the di...",
+    "actual_tags": [
+      "flashback"
+    ],
+    "false_positives": [
+      "romantic"
+    ],
+    "false_negatives": [
+      "flashback"
+    ],
+    "probabilities": {
+      "fp": {
+        "romantic": 0.6610593199729919
+      },
+      "fn": {
+        "flashback": 0.06332244724035263
+      }
+    }
+  },
+  {
+    "text": "Alexandra Medford, Jane Spofford and Sukie Ridgemont are three dissatisfied women living in the small town of Eastwick, New England. Alexandra is a sculptress and single mother, Jane is a newly divorc...",
+    "actual_tags": [
+      "comedy"
+    ],
+    "false_positives": [
+      "murder",
+      "psychedelic",
+      "paranormal"
+    ],
+    "false_negatives": [
+      "comedy"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.20161840319633484,
+        "psychedelic": 0.16156141459941864,
+        "paranormal": 0.24721814692020416
+      },
+      "fn": {
+        "comedy": 0.09369334578514099
+      }
+    }
+  },
+  {
+    "text": "Fugitive John Taylor flees an initially unspecified crime, with a wounded foot. Flashbacks and news reports reveal he robbed a bank in collusion with his girlfriend Simone, who was a teller in the ban...",
+    "actual_tags": [
+      "flashback",
+      "psychedelic",
+      "plot twist"
+    ],
+    "false_positives": [
+      "cult",
+      "murder",
+      "violence",
+      "revenge",
+      "suspenseful"
+    ],
+    "false_negatives": [
+      "psychedelic",
+      "plot twist"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.1295052319765091,
+        "murder": 0.7884360551834106,
+        "violence": 0.41674667596817017,
+        "revenge": 0.14249755442142487,
+        "suspenseful": 0.16233211755752563
+      },
+      "fn": {
+        "psychedelic": 0.0123822633177042,
+        "plot twist": 0.022851157933473587
+      }
+    }
+  },
+  {
+    "text": "Bill Williamson is a warped, frustrated young man who hates his life and hates society which leads him to be driven over the edge of sanity while keeping his craftyness on. He is in his early twenties...",
+    "actual_tags": [
+      "murder",
+      "violence",
+      "dark"
+    ],
+    "false_positives": [
+      "cult",
+      "romantic",
+      "flashback",
+      "psychedelic",
+      "comedy",
+      "psychological"
+    ],
+    "false_negatives": [
+      "violence",
+      "dark"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.17604677379131317,
+        "romantic": 0.16999448835849762,
+        "flashback": 0.3055468201637268,
+        "psychedelic": 0.4398897588253021,
+        "comedy": 0.20016168057918549,
+        "psychological": 0.10146347433328629
+      },
+      "fn": {
+        "violence": 0.0626603364944458,
+        "dark": 0.035342905670404434
+      }
+    }
+  },
+  {
+    "text": "Malibu, California, 1962. Matt the Enforcer (Jan-Michael Vincent), Jack (William Katt), and Leroy the Masochist (Gary Busey) are the three best surfers of the beach. The morning of the South swell Mat...",
+    "actual_tags": [
+      "cult",
+      "philosophical"
+    ],
+    "false_positives": [
+      "murder",
+      "violence",
+      "revenge",
+      "flashback",
+      "comedy"
+    ],
+    "false_negatives": [
+      "philosophical"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.7531478404998779,
+        "violence": 0.3728574514389038,
+        "revenge": 0.21482762694358826,
+        "flashback": 0.10781711339950562,
+        "comedy": 0.13555599749088287
+      },
+      "fn": {
+        "philosophical": 0.0014624963514506817
+      }
+    }
+  },
+  {
+    "text": "The film concerns an illusionist/magician named Tatischeff (no one ever says this name, but it is mentioned on the poster he carries with him, and shows at different performances).The scene opens in P...",
+    "actual_tags": [
+      "tragedy"
+    ],
+    "false_positives": [
+      "romantic",
+      "psychedelic",
+      "comedy",
+      "satire"
+    ],
+    "false_negatives": [
+      "tragedy"
+    ],
+    "probabilities": {
+      "fp": {
+        "romantic": 0.21423587203025818,
+        "psychedelic": 0.41501444578170776,
+        "comedy": 0.10515972226858139,
+        "satire": 0.10613121837377548
+      },
+      "fn": {
+        "tragedy": 0.0032615489326417446
+      }
+    }
+  },
+  {
+    "text": "In 1930, Jericho, a backwater Texan town 50 miles from the Mexican border, two crime syndicates, the Italian mob led by Fredo Strozzi (Ned Eisenberg), and the Irish mob led by \"Mr. Doyle\" (David Patri...",
+    "actual_tags": [
+      "murder",
+      "violence",
+      "romantic",
+      "action",
+      "revenge",
+      "neo noir",
+      "good versus evil"
+    ],
+    "false_positives": [
+      "cult",
+      "sadist",
+      "flashback",
+      "mystery",
+      "suspenseful",
+      "tragedy",
+      "comedy"
+    ],
+    "false_negatives": [
+      "good versus evil"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.302351176738739,
+        "sadist": 0.242135688662529,
+        "flashback": 0.3094036281108856,
+        "mystery": 0.1491784006357193,
+        "suspenseful": 0.4221378564834595,
+        "tragedy": 0.10141249746084213,
+        "comedy": 0.1213555634021759
+      },
+      "fn": {
+        "good versus evil": 0.030137771740555763
+      }
+    }
+  },
+  {
+    "text": "Simon (McAvoy), an art auctioneer, becomes an accessory to the theft of a painting\u2013Goya's Witches in the Air\u2013from his own auction house. When a gang attacks during an auction, Simon follows the house ...",
+    "actual_tags": [
+      "murder",
+      "violence",
+      "romantic",
+      "revenge",
+      "flashback",
+      "mystery",
+      "neo noir",
+      "psychedelic",
+      "comedy",
+      "plot twist",
+      "psychological"
+    ],
+    "false_positives": [
+      "cult",
+      "sadist",
+      "suspenseful"
+    ],
+    "false_negatives": [
+      "romantic",
+      "mystery",
+      "psychedelic",
+      "plot twist",
+      "psychological"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.3329033851623535,
+        "sadist": 0.1286439597606659,
+        "suspenseful": 0.2707487940788269
+      },
+      "fn": {
+        "romantic": 0.03354334831237793,
+        "mystery": 0.031233573332428932,
+        "psychedelic": 0.028280194848775864,
+        "plot twist": 0.017581133171916008,
+        "psychological": 0.006280955858528614
+      }
+    }
+  },
+  {
+    "text": "Architect Doug Roberts returns to San Francisco for the dedication of the Glass Tower, which he designed for James Duncan. At 138 stories (1,800 ft/550 m), it is the world's tallest building. An elect...",
+    "actual_tags": [
+      "cult",
+      "suspenseful"
+    ],
+    "false_positives": [
+      "murder",
+      "violence",
+      "comedy"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "murder": 0.5189579725265503,
+        "violence": 0.17649239301681519,
+        "comedy": 0.20400093495845795
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "Growing up and growing old never played so poignantly as it does in John Crowley's Is Anybody There? The film grapples with the sad truths of getting older and losing loved ones, all the while maintai...",
+    "actual_tags": [
+      "paranormal"
+    ],
+    "false_positives": [
+      "cult",
+      "murder",
+      "romantic",
+      "flashback",
+      "psychedelic",
+      "comedy",
+      "insanity",
+      "psychological"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "cult": 0.207521453499794,
+        "murder": 0.43962401151657104,
+        "romantic": 0.17811602354049683,
+        "flashback": 0.32314905524253845,
+        "psychedelic": 0.3457288146018982,
+        "comedy": 0.14984963834285736,
+        "insanity": 0.18155741691589355,
+        "psychological": 0.11301767826080322
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "A young boy (Richard White) lives with his mother (Virginia Maitland) and his father (Robert Chadwick). Both of the boy's parents don't like him and taunt him aggressively. The father in particular is...",
+    "actual_tags": [
+      "violence",
+      "psychedelic",
+      "avant garde"
+    ],
+    "false_positives": [
+      "murder",
+      "romantic"
+    ],
+    "false_negatives": [
+      "violence",
+      "psychedelic",
+      "avant garde"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.13974308967590332,
+        "romantic": 0.1853017807006836
+      },
+      "fn": {
+        "violence": 0.059981174767017365,
+        "psychedelic": 0.09269338846206665,
+        "avant garde": 0.009192951023578644
+      }
+    }
+  },
+  {
+    "text": "In the opening scene, an attractive blond woman wearing a lavender colored dress is making out with a man in a local cemetery, which suddenly ends when the woman pulls out a dagger and stabs the man t...",
+    "actual_tags": [
+      "cult",
+      "horror",
+      "murder",
+      "good versus evil"
+    ],
+    "false_positives": [
+      "gothic",
+      "violence",
+      "revenge",
+      "flashback",
+      "paranormal"
+    ],
+    "false_negatives": [
+      "good versus evil"
+    ],
+    "probabilities": {
+      "fp": {
+        "gothic": 0.15914131700992584,
+        "violence": 0.41418027877807617,
+        "revenge": 0.1374070644378662,
+        "flashback": 0.16148702800273895,
+        "paranormal": 0.22736983001232147
+      },
+      "fn": {
+        "good versus evil": 0.07720452547073364
+      }
+    }
+  },
+  {
+    "text": "Jason (an advertising executive) and Julie (a charitable investment advisor), longtime best friends now in their mid-30s live in the same building in Manhattan. Not romantically involved, they are clo...",
+    "actual_tags": [
+      "romantic",
+      "entertaining"
+    ],
+    "false_positives": [
+      "flashback",
+      "comedy"
+    ],
+    "false_negatives": [
+      "entertaining"
+    ],
+    "probabilities": {
+      "fp": {
+        "flashback": 0.1280430108308792,
+        "comedy": 0.2719362676143646
+      },
+      "fn": {
+        "entertaining": 0.07635036110877991
+      }
+    }
+  },
+  {
+    "text": "Romania, the 19th Century. Dr. Eswai (Giacomo Rossi-Stuart) arrives in a secluded Transylvanian village where he checks into a local inn and meets with Inspector Kruger (Piero Lulli) the local constab...",
+    "actual_tags": [
+      "gothic",
+      "revenge"
+    ],
+    "false_positives": [
+      "murder",
+      "violence",
+      "flashback"
+    ],
+    "false_negatives": [
+      "gothic"
+    ],
+    "probabilities": {
+      "fp": {
+        "murder": 0.6811724901199341,
+        "violence": 0.36676692962646484,
+        "flashback": 0.143812358379364
+      },
+      "fn": {
+        "gothic": 0.07576116174459457
+      }
+    }
+  },
+  {
+    "text": "An aging, sickly author, Leonard Schiller, is writing his last novel. He hasn't published a new book in years, even though his first four novels were well regarded in their time.A young, attractive gr...",
+    "actual_tags": [
+      "romantic"
+    ],
+    "false_positives": [
+      "murder",
+      "flashback",
+      "comedy"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "murder": 0.4481579065322876,
+        "flashback": 0.23337134718894958,
+        "comedy": 0.10813646763563156
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "The film is set in 1972 during the Vietnam War. A group of South Korean soldiers from Battalion 53 fail to report back from a strategically important island 150 kilometers south of Saigon referred to ...",
+    "actual_tags": [
+      "murder",
+      "violence",
+      "revenge",
+      "flashback",
+      "neo noir",
+      "paranormal"
+    ],
+    "false_positives": [
+      "cult"
+    ],
+    "false_negatives": [
+      "revenge",
+      "neo noir",
+      "paranormal"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.1676032543182373
+      },
+      "fn": {
+        "revenge": 0.0768650472164154,
+        "neo noir": 0.002132844179868698,
+        "paranormal": 0.005796049255877733
+      }
+    }
+  },
+  {
+    "text": "After the death of Antony and Cleopatra Egypt is ruled by the young tyrant Pharaoh Nemorat and his mother Tegi. Cleopatra has left a surviving daughter, Shila, raised by the king and queen of Assyria....",
+    "actual_tags": [
+      "murder"
+    ],
+    "false_positives": [
+      "violence",
+      "romantic",
+      "revenge",
+      "flashback"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "violence": 0.24318380653858185,
+        "romantic": 0.16879382729530334,
+        "revenge": 0.15245798230171204,
+        "flashback": 0.1446496695280075
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "Henry Creedlow (Jason Flemyng) is a businessman who lives a unhappy life; his high-strung, contemptuous wife Janine (Nina Garbiras) is indifferent to him which leads to him having fantasies about suic...",
+    "actual_tags": [
+      "murder",
+      "revenge",
+      "satire"
+    ],
+    "false_positives": [
+      "cult",
+      "violence",
+      "romantic",
+      "flashback",
+      "mystery",
+      "suspenseful",
+      "comedy",
+      "psychological"
+    ],
+    "false_negatives": [
+      "satire"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.1934753805398941,
+        "violence": 0.17994388937950134,
+        "romantic": 0.18932993710041046,
+        "flashback": 0.3429403007030487,
+        "mystery": 0.11716356873512268,
+        "suspenseful": 0.1803494095802307,
+        "comedy": 0.3384668231010437,
+        "psychological": 0.12177655100822449
+      },
+      "fn": {
+        "satire": 0.044868357479572296
+      }
+    }
+  },
+  {
+    "text": "Canga\u00e7o (Francisco Gaspar), a mistrustful clown with his face and hands covered in blood, is being held inside a dark room in the Police Station of a small town. Moreira (Paulo Vesp\u00facio) is the invest...",
+    "actual_tags": [
+      "murder",
+      "sadist"
+    ],
+    "false_positives": [
+      "cult",
+      "violence",
+      "revenge",
+      "flashback"
+    ],
+    "false_negatives": [
+      "sadist"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.14250124990940094,
+        "violence": 0.14605537056922913,
+        "revenge": 0.12546466290950775,
+        "flashback": 0.12042231857776642
+      },
+      "fn": {
+        "sadist": 0.020582344383001328
+      }
+    }
+  },
+  {
+    "text": "Seventeen-year-old Ree Dolly (Jennifer Lawrence) looks after her mentally ill mother, her twelve-year-old brother Sonny (Isaiah Stone), and her six-year-old sister Ashlee (Ashlee Thompson). Every day,...",
+    "actual_tags": [
+      "murder",
+      "violence",
+      "romantic",
+      "dramatic",
+      "revenge",
+      "mystery",
+      "neo noir",
+      "boring"
+    ],
+    "false_positives": [
+      "cult",
+      "cruelty",
+      "sadist",
+      "flashback",
+      "suspenseful",
+      "comedy",
+      "insanity"
+    ],
+    "false_negatives": [
+      "dramatic",
+      "mystery",
+      "neo noir",
+      "boring"
+    ],
+    "probabilities": {
+      "fp": {
+        "cult": 0.24328014254570007,
+        "cruelty": 0.14495062828063965,
+        "sadist": 0.150172159075737,
+        "flashback": 0.4227384924888611,
+        "suspenseful": 0.22754232585430145,
+        "comedy": 0.10061482340097427,
+        "insanity": 0.12565438449382782
+      },
+      "fn": {
+        "dramatic": 0.019975852221250534,
+        "mystery": 0.07954003661870956,
+        "neo noir": 0.07998950034379959,
+        "boring": 0.03963176906108856
+      }
+    }
+  },
+  {
+    "text": "BHUTTO is the definitive theatrical documentary about one of the most complex and fascinating characters of our time. Her epic life story is a tale of Shakespearean dimension involving a woman heroica...",
+    "actual_tags": [
+      "violence"
+    ],
+    "false_positives": [
+      "murder",
+      "romantic",
+      "flashback"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "murder": 0.2965404987335205,
+        "romantic": 0.2505243718624115,
+        "flashback": 0.23773734271526337
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "Strangways, the British Intelligence (SIS) Station Chief in Jamaica, is ambushed and killed, and his body is taken by a trio of assassins known as the \"Three Blind Mice\". They also break into Strangew...",
+    "actual_tags": [
+      "cult",
+      "murder",
+      "good versus evil"
+    ],
+    "false_positives": [
+      "violence",
+      "revenge"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "violence": 0.5350627303123474,
+        "revenge": 0.1739320009946823
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "Not all scientists believe in evolution. The 15 PhDs interviewed in this documentary do their best to explain why. Following on the heels of the publication of a book by the same title, Evolutions Ach...",
+    "actual_tags": [],
+    "false_positives": [
+      "cult",
+      "murder",
+      "violence",
+      "romantic",
+      "cruelty",
+      "dramatic",
+      "revenge",
+      "flashback",
+      "suspenseful",
+      "psychedelic",
+      "tragedy",
+      "boring",
+      "historical",
+      "storytelling",
+      "comedy",
+      "insanity",
+      "science fiction",
+      "avant garde"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "cult": 0.18630795180797577,
+        "murder": 0.35492342710494995,
+        "violence": 0.36148601770401,
+        "romantic": 0.24112579226493835,
+        "cruelty": 0.1002855896949768,
+        "dramatic": 0.1474970281124115,
+        "revenge": 0.1433124542236328,
+        "flashback": 0.3533822000026703,
+        "suspenseful": 0.10536634176969528,
+        "psychedelic": 0.29598698019981384,
+        "tragedy": 0.15232351422309875,
+        "boring": 0.1987314522266388,
+        "historical": 0.26545751094818115,
+        "storytelling": 0.12311174720525742,
+        "comedy": 0.11413414776325226,
+        "insanity": 0.12850575149059296,
+        "science fiction": 0.10295115411281586,
+        "avant garde": 0.1539822667837143
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "A man, referred to in the movie only as \"Man\" (Adrien Brody), wakes up, severely injured, in a wrecked car in the bottom of a ravine with his right leg stuck between the dashboard and the door. He has...",
+    "actual_tags": [
+      "murder",
+      "flashback"
+    ],
+    "false_positives": [
+      "cult",
+      "horror",
+      "violence",
+      "revenge",
+      "sadist",
+      "suspenseful",
+      "psychedelic",
+      "paranormal",
+      "comedy",
+      "insanity"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "cult": 0.3491673171520233,
+        "horror": 0.21133142709732056,
+        "violence": 0.6412719488143921,
+        "revenge": 0.17260241508483887,
+        "sadist": 0.13472896814346313,
+        "suspenseful": 0.24616876244544983,
+        "psychedelic": 0.13592660427093506,
+        "paranormal": 0.1487763673067093,
+        "comedy": 0.2247219979763031,
+        "insanity": 0.1524985134601593
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "Two men named Ty (Mike Kellin) and Vachel (Charles Bartlett) are hunting in a forest and come across an abandoned church, which they go in to explore. After Ty sees their truck being crashed into a tr...",
+    "actual_tags": [
+      "cult",
+      "horror",
+      "murder",
+      "violence",
+      "suspenseful",
+      "grindhouse film"
+    ],
+    "false_positives": [
+      "revenge"
+    ],
+    "false_negatives": [
+      "horror",
+      "suspenseful",
+      "grindhouse film"
+    ],
+    "probabilities": {
+      "fp": {
+        "revenge": 0.276010125875473
+      },
+      "fn": {
+        "horror": 0.00790293887257576,
+        "suspenseful": 0.07948137819766998,
+        "grindhouse film": 0.0016317300032824278
+      }
+    }
+  },
+  {
+    "text": "Picking up where the first movie left off, the Tall Man and his minions attempt to take Mike (James LeGros), but Reggie (Reggie Bannister) manages to save him after turning on the gas while the firepl...",
+    "actual_tags": [
+      "cult",
+      "good versus evil"
+    ],
+    "false_positives": [
+      "murder",
+      "violence",
+      "revenge",
+      "flashback",
+      "paranormal"
+    ],
+    "false_negatives": [],
+    "probabilities": {
+      "fp": {
+        "murder": 0.5506080985069275,
+        "violence": 0.5533767938613892,
+        "revenge": 0.15651661157608032,
+        "flashback": 0.13755656778812408,
+        "paranormal": 0.15514099597930908
+      },
+      "fn": {}
+    }
+  },
+  {
+    "text": "Nino Brown (Wesley Snipes) is an up-and-coming drug pusher. His brother and right-hand-man, Gee Money (Allen Payne) introduces Nino to a new drug: freebased \"crack\" cocaine, which Gee says is cheaper ...",
+    "actual_tags": [
+      "cult",
+      "murder",
+      "violence",
+      "cruelty",
+      "revenge",
+      "sadist",
+      "flashback",
+      "neo noir",
+      "comedy",
+      "humor",
+      "blaxploitation"
+    ],
+    "false_positives": [
+      "action",
+      "suspenseful"
+    ],
+    "false_negatives": [
+      "cruelty",
+      "humor",
+      "blaxploitation"
+    ],
+    "probabilities": {
+      "fp": {
+        "action": 0.10648612678050995,
+        "suspenseful": 0.18427720665931702
+      },
+      "fn": {
+        "cruelty": 0.03718171268701553,
+        "humor": 0.05007568374276161,
+        "blaxploitation": 0.028681740164756775
+      }
+    }
+  }
+]

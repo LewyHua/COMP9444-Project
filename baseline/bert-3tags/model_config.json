@@ -1,0 +1,11 @@
+{
+  "model_name": "bert-base-uncased",
+  "num_labels": 68,
+  "batch_size": 32,
+  "max_length": 256,
+  "bert_learning_rate": 2e-05,
+  "classifier_learning_rate": 0.001,
+  "max_epochs": 20,
+  "total_params": 109534532,
+  "trainable_params": 109534532
+}

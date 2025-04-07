@@ -1,0 +1,1395 @@
+{
+  "model_type": "bilstm_3tags",
+  "best_validation": {
+    "loss": 4.117548540433248,
+    "accuracy": 0.0008428150021070375,
+    "precision": 0.13962635201573254,
+    "recall": 0.18143812231846254,
+    "f1": 0.13818439139201352,
+    "per_label": {
+      "atmospheric": {
+        "precision": 0.06153846153846154,
+        "recall": 0.06451612903225806,
+        "f1": 0.06299212598425197,
+        "support": 62
+      },
+      "cult": {
+        "precision": 0.11538461538461539,
+        "recall": 0.013729977116704805,
+        "f1": 0.024539877300613498,
+        "support": 437
+      },
+      "gothic": {
+        "precision": 0.0958904109589041,
+        "recall": 0.2222222222222222,
+        "f1": 0.1339712918660287,
+        "support": 63
+      },
+      "horror": {
+        "precision": 0.12295081967213115,
+        "recall": 0.189873417721519,
+        "f1": 0.14925373134328357,
+        "support": 79
+      },
+      "murder": {
+        "precision": 0.5125,
+        "recall": 0.3542116630669546,
+        "f1": 0.41890166028097064,
+        "support": 926
+      },
+      "violence": {
+        "precision": 0.35555555555555557,
+        "recall": 0.18851251840942562,
+        "f1": 0.24639076034648702,
+        "support": 679
+      },
+      "romantic": {
+        "precision": 0.24579124579124578,
+        "recall": 0.1622222222222222,
+        "f1": 0.19544846050870146,
+        "support": 450
+      },
+      "feel-good": {
+        "precision": 0.05,
+        "recall": 0.1111111111111111,
+        "f1": 0.06896551724137931,
+        "support": 9
+      },
+      "inspiring": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 17
+      },
+      "stupid": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 35
+      },
+      "action": {
+        "precision": 0.11734693877551021,
+        "recall": 0.20353982300884957,
+        "f1": 0.1488673139158576,
+        "support": 113
+      },
+      "cruelty": {
+        "precision": 0.03225806451612903,
+        "recall": 0.031746031746031744,
+        "f1": 0.032,
+        "support": 63
+      },
+      "dramatic": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 61
+      },
+      "revenge": {
+        "precision": 0.17973856209150327,
+        "recall": 0.14473684210526316,
+        "f1": 0.16034985422740525,
+        "support": 380
+      },
+      "sadist": {
+        "precision": 0.07608695652173914,
+        "recall": 0.07608695652173914,
+        "f1": 0.07608695652173914,
+        "support": 92
+      },
+      "flashback": {
+        "precision": 0.2608695652173913,
+        "recall": 0.04,
+        "f1": 0.06936416184971098,
+        "support": 450
+      },
+      "queer": {
+        "precision": 0.1,
+        "recall": 0.16666666666666666,
+        "f1": 0.125,
+        "support": 18
+      },
+      "mystery": {
+        "precision": 0.05357142857142857,
+        "recall": 0.05084745762711865,
+        "f1": 0.05217391304347826,
+        "support": 59
+      },
+      "suspenseful": {
+        "precision": 0.1232876712328767,
+        "recall": 0.054878048780487805,
+        "f1": 0.0759493670886076,
+        "support": 164
+      },
+      "neo noir": {
+        "precision": 0.109375,
+        "recall": 0.06542056074766354,
+        "f1": 0.08187134502923976,
+        "support": 107
+      },
+      "prank": {
+        "precision": 0.0625,
+        "recall": 0.14545454545454545,
+        "f1": 0.08743169398907104,
+        "support": 55
+      },
+      "psychedelic": {
+        "precision": 0.22844827586206898,
+        "recall": 0.17905405405405406,
+        "f1": 0.20075757575757575,
+        "support": 296
+      },
+      "tragedy": {
+        "precision": 0.15625,
+        "recall": 0.052083333333333336,
+        "f1": 0.078125,
+        "support": 96
+      },
+      "home movie": {
+        "precision": 0.013333333333333334,
+        "recall": 0.03333333333333333,
+        "f1": 0.01904761904761905,
+        "support": 30
+      },
+      "good versus evil": {
+        "precision": 0.1282051282051282,
+        "recall": 0.3237410071942446,
+        "f1": 0.1836734693877551,
+        "support": 139
+      },
+      "depressing": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 30
+      },
+      "realism": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 32
+      },
+      "boring": {
+        "precision": 0.044585987261146494,
+        "recall": 0.0945945945945946,
+        "f1": 0.06060606060606061,
+        "support": 74
+      },
+      "haunting": {
+        "precision": 0.06557377049180328,
+        "recall": 0.16666666666666666,
+        "f1": 0.09411764705882353,
+        "support": 24
+      },
+      "sentimental": {
+        "precision": 0.036585365853658534,
+        "recall": 0.11538461538461539,
+        "f1": 0.05555555555555555,
+        "support": 26
+      },
+      "paranormal": {
+        "precision": 0.07926829268292683,
+        "recall": 0.14444444444444443,
+        "f1": 0.10236220472440945,
+        "support": 90
+      },
+      "historical": {
+        "precision": 0.036231884057971016,
+        "recall": 0.3225806451612903,
+        "f1": 0.06514657980456026,
+        "support": 31
+      },
+      "storytelling": {
+        "precision": 0.01639344262295082,
+        "recall": 0.016666666666666666,
+        "f1": 0.01652892561983471,
+        "support": 60
+      },
+      "comedy": {
+        "precision": 0.1559633027522936,
+        "recall": 0.058419243986254296,
+        "f1": 0.085,
+        "support": 291
+      },
+      "fantasy": {
+        "precision": 0.1285140562248996,
+        "recall": 0.32653061224489793,
+        "f1": 0.1844380403458213,
+        "support": 98
+      },
+      "philosophical": {
+        "precision": 0.024691358024691357,
+        "recall": 0.06896551724137931,
+        "f1": 0.03636363636363636,
+        "support": 29
+      },
+      "adult comedy": {
+        "precision": 0.03278688524590164,
+        "recall": 0.08695652173913043,
+        "f1": 0.047619047619047616,
+        "support": 23
+      },
+      "cute": {
+        "precision": 0.05511811023622047,
+        "recall": 0.21212121212121213,
+        "f1": 0.0875,
+        "support": 33
+      },
+      "entertaining": {
+        "precision": 0.06338028169014084,
+        "recall": 0.07377049180327869,
+        "f1": 0.06818181818181818,
+        "support": 122
+      },
+      "bleak": {
+        "precision": 0.012195121951219513,
+        "recall": 0.03333333333333333,
+        "f1": 0.017857142857142856,
+        "support": 30
+      },
+      "humor": {
+        "precision": 0.06293706293706294,
+        "recall": 0.0661764705882353,
+        "f1": 0.06451612903225806,
+        "support": 136
+      },
+      "plot twist": {
+        "precision": 0.01694915254237288,
+        "recall": 0.043478260869565216,
+        "f1": 0.024390243902439025,
+        "support": 23
+      },
+      "pornographic": {
+        "precision": 0.02247191011235955,
+        "recall": 0.08333333333333333,
+        "f1": 0.035398230088495575,
+        "support": 24
+      },
+      "brainwashing": {
+        "precision": 0.03571428571428571,
+        "recall": 0.1111111111111111,
+        "f1": 0.05405405405405406,
+        "support": 18
+      },
+      "insanity": {
+        "precision": 0.09090909090909091,
+        "recall": 0.041237113402061855,
+        "f1": 0.05673758865248227,
+        "support": 97
+      },
+      "science fiction": {
+        "precision": 0.0761904761904762,
+        "recall": 0.14814814814814814,
+        "f1": 0.10062893081761007,
+        "support": 54
+      },
+      "claustrophobic": {
+        "precision": 0.15384615384615385,
+        "recall": 0.11764705882352941,
+        "f1": 0.13333333333333333,
+        "support": 17
+      },
+      "dark": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 65
+      },
+      "psychological": {
+        "precision": 0.015384615384615385,
+        "recall": 0.025,
+        "f1": 0.01904761904761905,
+        "support": 40
+      },
+      "melodrama": {
+        "precision": 0.0782608695652174,
+        "recall": 0.11688311688311688,
+        "f1": 0.09375,
+        "support": 77
+      },
+      "absurd": {
+        "precision": 0.031914893617021274,
+        "recall": 0.13636363636363635,
+        "f1": 0.05172413793103448,
+        "support": 44
+      },
+      "historical fiction": {
+        "precision": 0.04430379746835443,
+        "recall": 0.2916666666666667,
+        "f1": 0.07692307692307693,
+        "support": 24
+      },
+      "satire": {
+        "precision": 0.07253886010362694,
+        "recall": 0.10687022900763359,
+        "f1": 0.08641975308641975,
+        "support": 131
+      },
+      "alternate history": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 15
+      },
+      "alternate reality": {
+        "precision": 0.02,
+        "recall": 0.027777777777777776,
+        "f1": 0.023255813953488372,
+        "support": 36
+      },
+      "comic": {
+        "precision": 0.0625,
+        "recall": 0.17391304347826086,
+        "f1": 0.09195402298850575,
+        "support": 23
+      },
+      "grindhouse film": {
+        "precision": 0.04,
+        "recall": 0.09090909090909091,
+        "f1": 0.05555555555555555,
+        "support": 11
+      },
+      "thought-provoking": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 19
+      },
+      "clever": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 13
+      },
+      "western": {
+        "precision": 0.05172413793103448,
+        "recall": 0.2727272727272727,
+        "f1": 0.08695652173913043,
+        "support": 11
+      },
+      "blaxploitation": {
+        "precision": 0.030303030303030304,
+        "recall": 0.1111111111111111,
+        "f1": 0.047619047619047616,
+        "support": 9
+      },
+      "whimsical": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 8
+      },
+      "intrigue": {
+        "precision": 0.011627906976744186,
+        "recall": 0.041666666666666664,
+        "f1": 0.01818181818181818,
+        "support": 24
+      },
+      "allegory": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 28
+      },
+      "anti war": {
+        "precision": 0.029850746268656716,
+        "recall": 0.11764705882352941,
+        "f1": 0.047619047619047616,
+        "support": 17
+      },
+      "avant garde": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 32
+      },
+      "suicidal": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 7
+      },
+      "magical realism": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 8
+      }
+    },
+    "prediction_method": "top_k_with_threshold",
+    "k_value": 3,
+    "min_threshold": 0.1
+  },
+  "worst_validation": {
+    "loss": 1.300118743578593,
+    "accuracy": 0.0012642225031605564,
+    "precision": 0.2612726506531816,
+    "recall": 0.31689556111109646,
+    "f1": 0.25010524631365516,
+    "per_label": {
+      "atmospheric": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 62
+      },
+      "cult": {
+        "precision": 0.21631205673758866,
+        "recall": 0.2791762013729977,
+        "f1": 0.24375624375624375,
+        "support": 437
+      },
+      "gothic": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 63
+      },
+      "horror": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 79
+      },
+      "murder": {
+        "precision": 0.38720981165133594,
+        "recall": 0.9546436285097192,
+        "f1": 0.5509504518541601,
+        "support": 926
+      },
+      "violence": {
+        "precision": 0.30609896432681244,
+        "recall": 0.7835051546391752,
+        "f1": 0.4402151427389326,
+        "support": 679
+      },
+      "romantic": {
+        "precision": 0.2183288409703504,
+        "recall": 0.54,
+        "f1": 0.31094049904030713,
+        "support": 450
+      },
+      "feel-good": {
+        "precision": 0.005509641873278237,
+        "recall": 0.2222222222222222,
+        "f1": 0.010752688172043012,
+        "support": 9
+      },
+      "inspiring": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 17
+      },
+      "stupid": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 35
+      },
+      "action": {
+        "precision": 0.10596026490066225,
+        "recall": 0.1415929203539823,
+        "f1": 0.12121212121212122,
+        "support": 113
+      },
+      "cruelty": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 63
+      },
+      "dramatic": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 61
+      },
+      "revenge": {
+        "precision": 0.26666666666666666,
+        "recall": 0.010526315789473684,
+        "f1": 0.020253164556962026,
+        "support": 380
+      },
+      "sadist": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 92
+      },
+      "flashback": {
+        "precision": 0.1643835616438356,
+        "recall": 0.08,
+        "f1": 0.10762331838565023,
+        "support": 450
+      },
+      "queer": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 18
+      },
+      "mystery": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 59
+      },
+      "suspenseful": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 164
+      },
+      "neo noir": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 107
+      },
+      "prank": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 55
+      },
+      "psychedelic": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 296
+      },
+      "tragedy": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 96
+      },
+      "home movie": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 30
+      },
+      "good versus evil": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 139
+      },
+      "depressing": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 30
+      },
+      "realism": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 32
+      },
+      "boring": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 74
+      },
+      "haunting": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 24
+      },
+      "sentimental": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 26
+      },
+      "paranormal": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 90
+      },
+      "historical": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 31
+      },
+      "storytelling": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 60
+      },
+      "comedy": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 291
+      },
+      "fantasy": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 98
+      },
+      "philosophical": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 29
+      },
+      "adult comedy": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 23
+      },
+      "cute": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 33
+      },
+      "entertaining": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 122
+      },
+      "bleak": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 30
+      },
+      "humor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 136
+      },
+      "plot twist": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 23
+      },
+      "pornographic": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 24
+      },
+      "brainwashing": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 18
+      },
+      "insanity": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 97
+      },
+      "science fiction": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 54
+      },
+      "claustrophobic": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 17
+      },
+      "dark": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 65
+      },
+      "psychological": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 40
+      },
+      "melodrama": {
+        "precision": 0.03307086614173228,
+        "recall": 0.2727272727272727,
+        "f1": 0.05898876404494382,
+        "support": 77
+      },
+      "absurd": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 44
+      },
+      "historical fiction": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 24
+      },
+      "satire": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 131
+      },
+      "alternate history": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 15
+      },
+      "alternate reality": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 36
+      },
+      "comic": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 23
+      },
+      "grindhouse film": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 11
+      },
+      "thought-provoking": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 19
+      },
+      "clever": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 13
+      },
+      "western": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 11
+      },
+      "blaxploitation": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 9
+      },
+      "whimsical": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 8
+      },
+      "intrigue": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 24
+      },
+      "allegory": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 28
+      },
+      "anti war": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 17
+      },
+      "avant garde": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 32
+      },
+      "suicidal": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 7
+      },
+      "magical realism": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 8
+      }
+    },
+    "prediction_method": "top_k_with_threshold",
+    "k_value": 3,
+    "min_threshold": 0.1
+  },
+  "test": {
+    "loss": 3.8339915096118884,
+    "accuracy": 0.0013486176668914363,
+    "precision": 0.13531130591144078,
+    "recall": 0.17031803496020503,
+    "f1": 0.1312715282180989,
+    "per_label": {
+      "atmospheric": {
+        "precision": 0.06976744186046512,
+        "recall": 0.0759493670886076,
+        "f1": 0.07272727272727272,
+        "support": 79
+      },
+      "cult": {
+        "precision": 0.0625,
+        "recall": 0.0054446460980036296,
+        "f1": 0.01001669449081803,
+        "support": 551
+      },
+      "gothic": {
+        "precision": 0.13333333333333333,
+        "recall": 0.2891566265060241,
+        "f1": 0.18250950570342206,
+        "support": 83
+      },
+      "horror": {
+        "precision": 0.08666666666666667,
+        "recall": 0.14130434782608695,
+        "f1": 0.10743801652892562,
+        "support": 92
+      },
+      "murder": {
+        "precision": 0.4843110504774898,
+        "recall": 0.30735930735930733,
+        "f1": 0.3760593220338983,
+        "support": 1155
+      },
+      "violence": {
+        "precision": 0.3787528868360277,
+        "recall": 0.1800219538968167,
+        "f1": 0.24404761904761904,
+        "support": 911
+      },
+      "romantic": {
+        "precision": 0.2783171521035599,
+        "recall": 0.1465076660988075,
+        "f1": 0.19196428571428573,
+        "support": 587
+      },
+      "feel-good": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 11
+      },
+      "inspiring": {
+        "precision": 0.016666666666666666,
+        "recall": 0.03125,
+        "f1": 0.021739130434782608,
+        "support": 32
+      },
+      "stupid": {
+        "precision": 0.008771929824561403,
+        "recall": 0.02564102564102564,
+        "f1": 0.013071895424836602,
+        "support": 39
+      },
+      "action": {
+        "precision": 0.11290322580645161,
+        "recall": 0.21705426356589147,
+        "f1": 0.14854111405835543,
+        "support": 129
+      },
+      "cruelty": {
+        "precision": 0.037383177570093455,
+        "recall": 0.041237113402061855,
+        "f1": 0.0392156862745098,
+        "support": 97
+      },
+      "dramatic": {
+        "precision": 0.1,
+        "recall": 0.012048192771084338,
+        "f1": 0.021505376344086023,
+        "support": 83
+      },
+      "revenge": {
+        "precision": 0.18873239436619718,
+        "recall": 0.13214990138067062,
+        "f1": 0.1554524361948956,
+        "support": 507
+      },
+      "sadist": {
+        "precision": 0.07377049180327869,
+        "recall": 0.060810810810810814,
+        "f1": 0.06666666666666667,
+        "support": 148
+      },
+      "flashback": {
+        "precision": 0.2571428571428571,
+        "recall": 0.030201342281879196,
+        "f1": 0.05405405405405406,
+        "support": 596
+      },
+      "queer": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 15
+      },
+      "mystery": {
+        "precision": 0.08536585365853659,
+        "recall": 0.05982905982905983,
+        "f1": 0.07035175879396985,
+        "support": 117
+      },
+      "suspenseful": {
+        "precision": 0.17777777777777778,
+        "recall": 0.07017543859649122,
+        "f1": 0.10062893081761007,
+        "support": 228
+      },
+      "neo noir": {
+        "precision": 0.1111111111111111,
+        "recall": 0.041379310344827586,
+        "f1": 0.06030150753768844,
+        "support": 145
+      },
+      "prank": {
+        "precision": 0.020833333333333332,
+        "recall": 0.0784313725490196,
+        "f1": 0.03292181069958848,
+        "support": 51
+      },
+      "psychedelic": {
+        "precision": 0.24380165289256198,
+        "recall": 0.14936708860759493,
+        "f1": 0.18524332810047095,
+        "support": 395
+      },
+      "tragedy": {
+        "precision": 0.08888888888888889,
+        "recall": 0.03361344537815126,
+        "f1": 0.04878048780487805,
+        "support": 119
+      },
+      "home movie": {
+        "precision": 0.01639344262295082,
+        "recall": 0.06896551724137931,
+        "f1": 0.026490066225165563,
+        "support": 29
+      },
+      "good versus evil": {
+        "precision": 0.16546762589928057,
+        "recall": 0.3631578947368421,
+        "f1": 0.2273476112026359,
+        "support": 190
+      },
+      "depressing": {
+        "precision": 0.0449438202247191,
+        "recall": 0.09523809523809523,
+        "f1": 0.061068702290076333,
+        "support": 42
+      },
+      "realism": {
+        "precision": 0.022988505747126436,
+        "recall": 0.05405405405405406,
+        "f1": 0.03225806451612903,
+        "support": 37
+      },
+      "boring": {
+        "precision": 0.061224489795918366,
+        "recall": 0.10434782608695652,
+        "f1": 0.07717041800643087,
+        "support": 115
+      },
+      "haunting": {
+        "precision": 0.1,
+        "recall": 0.34615384615384615,
+        "f1": 0.15517241379310345,
+        "support": 26
+      },
+      "sentimental": {
+        "precision": 0.05172413793103448,
+        "recall": 0.11764705882352941,
+        "f1": 0.0718562874251497,
+        "support": 51
+      },
+      "paranormal": {
+        "precision": 0.09580838323353294,
+        "recall": 0.12403100775193798,
+        "f1": 0.10810810810810811,
+        "support": 129
+      },
+      "historical": {
+        "precision": 0.057291666666666664,
+        "recall": 0.34375,
+        "f1": 0.09821428571428571,
+        "support": 64
+      },
+      "storytelling": {
+        "precision": 0.09230769230769231,
+        "recall": 0.09090909090909091,
+        "f1": 0.0916030534351145,
+        "support": 66
+      },
+      "comedy": {
+        "precision": 0.1597222222222222,
+        "recall": 0.0625,
+        "f1": 0.08984375,
+        "support": 368
+      },
+      "fantasy": {
+        "precision": 0.09090909090909091,
+        "recall": 0.23008849557522124,
+        "f1": 0.13032581453634084,
+        "support": 113
+      },
+      "philosophical": {
+        "precision": 0.020833333333333332,
+        "recall": 0.05555555555555555,
+        "f1": 0.030303030303030304,
+        "support": 36
+      },
+      "adult comedy": {
+        "precision": 0.02702702702702703,
+        "recall": 0.07142857142857142,
+        "f1": 0.0392156862745098,
+        "support": 28
+      },
+      "cute": {
+        "precision": 0.011235955056179775,
+        "recall": 0.04878048780487805,
+        "f1": 0.0182648401826484,
+        "support": 41
+      },
+      "entertaining": {
+        "precision": 0.07407407407407407,
+        "recall": 0.0880503144654088,
+        "f1": 0.08045977011494253,
+        "support": 159
+      },
+      "bleak": {
+        "precision": 0.023255813953488372,
+        "recall": 0.075,
+        "f1": 0.03550295857988166,
+        "support": 40
+      },
+      "humor": {
+        "precision": 0.07329842931937172,
+        "recall": 0.08139534883720931,
+        "f1": 0.07713498622589532,
+        "support": 172
+      },
+      "plot twist": {
+        "precision": 0.03278688524590164,
+        "recall": 0.045454545454545456,
+        "f1": 0.0380952380952381,
+        "support": 44
+      },
+      "pornographic": {
+        "precision": 0.03076923076923077,
+        "recall": 0.14285714285714285,
+        "f1": 0.05063291139240506,
+        "support": 28
+      },
+      "brainwashing": {
+        "precision": 0.057971014492753624,
+        "recall": 0.2222222222222222,
+        "f1": 0.09195402298850575,
+        "support": 18
+      },
+      "insanity": {
+        "precision": 0.0958904109589041,
+        "recall": 0.051470588235294115,
+        "f1": 0.06698564593301436,
+        "support": 136
+      },
+      "science fiction": {
+        "precision": 0.0903954802259887,
+        "recall": 0.24242424242424243,
+        "f1": 0.13168724279835392,
+        "support": 66
+      },
+      "claustrophobic": {
+        "precision": 0.058823529411764705,
+        "recall": 0.06666666666666667,
+        "f1": 0.0625,
+        "support": 15
+      },
+      "dark": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 85
+      },
+      "psychological": {
+        "precision": 0.05952380952380952,
+        "recall": 0.07692307692307693,
+        "f1": 0.06711409395973154,
+        "support": 65
+      },
+      "melodrama": {
+        "precision": 0.08450704225352113,
+        "recall": 0.12903225806451613,
+        "f1": 0.10212765957446808,
+        "support": 93
+      },
+      "absurd": {
+        "precision": 0.012145748987854251,
+        "recall": 0.05357142857142857,
+        "f1": 0.019801980198019802,
+        "support": 56
+      },
+      "historical fiction": {
+        "precision": 0.03167420814479638,
+        "recall": 0.28,
+        "f1": 0.056910569105691054,
+        "support": 25
+      },
+      "satire": {
+        "precision": 0.07177033492822966,
+        "recall": 0.08670520231213873,
+        "f1": 0.07853403141361257,
+        "support": 173
+      },
+      "alternate history": {
+        "precision": 0.08333333333333333,
+        "recall": 0.16666666666666666,
+        "f1": 0.1111111111111111,
+        "support": 18
+      },
+      "alternate reality": {
+        "precision": 0.056338028169014086,
+        "recall": 0.11428571428571428,
+        "f1": 0.07547169811320754,
+        "support": 35
+      },
+      "comic": {
+        "precision": 0.02631578947368421,
+        "recall": 0.07407407407407407,
+        "f1": 0.038834951456310676,
+        "support": 27
+      },
+      "grindhouse film": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 12
+      },
+      "thought-provoking": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 27
+      },
+      "clever": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 13
+      },
+      "western": {
+        "precision": 0.037037037037037035,
+        "recall": 0.14285714285714285,
+        "f1": 0.058823529411764705,
+        "support": 14
+      },
+      "blaxploitation": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 11
+      },
+      "whimsical": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 13
+      },
+      "intrigue": {
+        "precision": 0.009900990099009901,
+        "recall": 0.025,
+        "f1": 0.014184397163120567,
+        "support": 40
+      },
+      "allegory": {
+        "precision": 0.027777777777777776,
+        "recall": 0.045454545454545456,
+        "f1": 0.034482758620689655,
+        "support": 22
+      },
+      "anti war": {
+        "precision": 0.049019607843137254,
+        "recall": 0.16666666666666666,
+        "f1": 0.07575757575757576,
+        "support": 30
+      },
+      "avant garde": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 45
+      },
+      "suicidal": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 8
+      },
+      "magical realism": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      }
+    },
+    "prediction_method": "top_k_with_threshold",
+    "k_value": 3,
+    "min_threshold": 0.1
+  },
+  "training_metrics": {
+    "epochs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "train_losses": [
+      1.358005418921962,
+      1.3467222311681368,
+      1.3285967288193878,
+      1.2791415776066508,
+      1.193964740242621,
+      1.0940697462069064,
+      1.01375948961335,
+      0.9394860147225736,
+      0.8874003142620177,
+      0.8405954861881757,
+      0.8039472261663237,
+      0.7625488236496344,
+      0.7310937270772979,
+      0.7207008752758656,
+      0.6973923329351727,
+      0.6800452551055035,
+      0.661319680988588,
+      0.6533684624164594,
+      0.6432651312463613,
+      0.63161682470479
+    ],
+    "val_losses": [
+      1.3338736089070637,
+      1.3115565005938212,
+      1.300118743578593,
+      1.2970272525151572,
+      1.3572442245483398,
+      1.489082360267639,
+      1.897620435555776,
+      1.7452977601687114,
+      2.105400652885437,
+      2.493764007886251,
+      2.9414234844843548,
+      2.792334736188253,
+      4.116070297559102,
+      2.835214776992798,
+      4.037450419267018,
+      3.307996006011963,
+      3.6824452972412107,
+      3.2952560194333396,
+      4.733528470993042,
+      4.117548540433248
+    ],
+    "train_f1": [
+      0.08138954123636369,
+      0.08171163851172734,
+      0.08218491803269379,
+      0.08466925877813906,
+      0.09511536670292979,
+      0.1079329715758609,
+      0.12131756900730165,
+      0.13470253391187734,
+      0.1462642722194869,
+      0.15760813011669575,
+      0.16820124467272118,
+      0.18053759675763373,
+      0.18964371561385973,
+      0.1949528579761743,
+      0.20157213366192153,
+      0.2069527623419118,
+      0.2141739126148873,
+      0.21809777817840853,
+      0.22381112199099287,
+      0.22878880737333546
+    ],
+    "val_f1": [
+      0.07938111783167708,
+      0.07979307532495473,
+      0.07951052847166055,
+      0.08301425568942825,
+      0.09098075597196384,
+      0.10443538168399366,
+      0.1269084059564972,
+      0.12211214574838056,
+      0.13329506460739166,
+      0.14814541567591066,
+      0.16050903732551752,
+      0.1532916239217278,
+      0.18256999041144203,
+      0.1521841403926714,
+      0.17918158421656316,
+      0.1616593158149028,
+      0.17380067335182608,
+      0.16322949707694975,
+      0.19022010879210227,
+      0.1781561090265517
+    ],
+    "best_epoch": 19,
+    "best_val_f1": 0.19022010879210227,
+    "worst_epoch": 3,
+    "worst_val_f1": 0.07951052847166055
+  },
+  "model_config": {
+    "vocab_size": 30000,
+    "embedding_dim": 300,
+    "hidden_dim": 128,
+    "output_dim": 68,
+    "n_layers": 2,
+    "dropout": 0.5,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 32,
+    "max_seq_length": 300,
+    "max_epochs": 20,
+    "total_params": 9877509,
+    "trainable_params": 9877509
+  },
+  "timestamp": "2025-04-07 17:05:42"
+}

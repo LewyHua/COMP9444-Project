@@ -1,0 +1,15 @@
+{
+  "vocab_size": 30000,
+  "embedding_dim": 300,
+  "hidden_dim": 128,
+  "output_dim": 68,
+  "n_layers": 2,
+  "dropout": 0.5,
+  "learning_rate": 0.001,
+  "weight_decay": 1e-05,
+  "batch_size": 32,
+  "max_seq_length": 300,
+  "max_epochs": 20,
+  "total_params": 9877509,
+  "trainable_params": 9877509
+}
