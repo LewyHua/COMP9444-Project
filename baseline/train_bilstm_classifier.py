@@ -24,7 +24,7 @@ from collections import Counter
 from tqdm import tqdm
 import re
 import seaborn as sns
-from config import (
+from baseline.config import (
     DATA_DIR, OUTPUT_DIR,
     VALID_TAGS_PATH, TRAIN_DATA_PATH, VAL_DATA_PATH, TEST_DATA_PATH,
     BILSTM_MODEL_PATH, BILSTM_VOCAB_PATH, BILSTM_RESULTS_PATH,

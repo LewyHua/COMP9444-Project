@@ -7,6 +7,7 @@ MPST数据集处理与模型训练配置文件
 """
 
 import os
+import platform
 
 # 数据目录设置
 INPUT_DIR = './MPST_v2'  # 原始MPST数据集目录
@@ -58,5 +59,48 @@ N_LAYERS = 2             # LSTM层数
 DROPOUT = 0.5            # Dropout比率
 LEARNING_RATE = 0.001    # 学习率
 WEIGHT_DECAY = 1e-5      # L2正则化系数
-MAX_EPOCHS = 20          # 最大训练轮次
-PATIENCE = 5             # 早停耐心值 
+MAX_EPOCHS = 20          # 最大训练轮次（所有模型通用的训练轮次参数）
+PATIENCE = 5             # 早停耐心值
+PREDICTION_THRESHOLD = 0.2  # 多标签分类预测阈值，所有模型共用
+
+# ============= BERT 模型配置 =============
+# 根据操作系统设置路径格式
+if platform.system() == 'Windows':
+    # Windows系统使用这种路径格式
+    LOCAL_BERT_MODEL_PATH = 'D:/share/base/bert-base-uncased'  # BERT模型本地路径
+    BERT_3TAGS_DIR = 'D:/share/base/bert-3tags'               # BERT输出目录
+else:
+    # Mac/Linux系统使用这种路径格式
+    LOCAL_BERT_MODEL_PATH = '/Volumes/share/base/bert-base-uncased'
+    BERT_3TAGS_DIR = '/Volumes/share/base/bert-3tags'
+
+# 确保BERT输出目录存在
+os.makedirs(BERT_3TAGS_DIR, exist_ok=True)
+
+# BERT模型设置
+BERT_MODEL_NAME = 'bert-base-uncased'  # 使用的BERT模型名称
+BERT_MAX_LENGTH = 128                  # BERT输入的最大长度
+BERT_LEARNING_RATE = 2e-5              # BERT层学习率
+CLASSIFIER_LEARNING_RATE = 1e-3        # 分类器学习率
+WARMUP_PROPORTION = 0.1                # 预热比例
+BERT_DROPOUT = 0.3                     # BERT模型的dropout率
+CPU_BATCH_SIZE = 8                     # CPU训练时的批处理大小
+OFFLINE_MODE = False                   # 如果为True，将不会从Hugging Face下载模型
+
+# BERT输出文件路径
+BERT_BEST_MODEL_PATH = os.path.join(BERT_3TAGS_DIR, 'best_model.pt')
+BERT_WORST_MODEL_PATH = os.path.join(BERT_3TAGS_DIR, 'worst_model.pt')
+BERT_3TAGS_RESULTS_PATH = os.path.join(BERT_3TAGS_DIR, 'results.json')
+BERT_3TAGS_LOSS_CURVE_PATH = os.path.join(BERT_3TAGS_DIR, 'loss_curves.png')
+BERT_3TAGS_CONFUSION_MATRIX_PATH = os.path.join(BERT_3TAGS_DIR, 'confusion_matrix.png')
+BERT_3TAGS_TAG_CORR_PATH = os.path.join(BERT_3TAGS_DIR, 'tag_correlations.png')
+BERT_3TAGS_PERFORMANCE_DIST_PATH = os.path.join(BERT_3TAGS_DIR, 'performance_distribution.png')
+BERT_3TAGS_TOP_TAGS_PATH = os.path.join(BERT_3TAGS_DIR, 'top_tags_performance.png')
+BERT_3TAGS_EPOCH_METRICS_PATH = os.path.join(BERT_3TAGS_DIR, 'epoch_metrics.png')
+BERT_3TAGS_TAG_HEATMAP_PATH = os.path.join(BERT_3TAGS_DIR, 'tag_heatmap.png')
+BERT_TEXT_LENGTH_DIST_PATH = os.path.join(BERT_3TAGS_DIR, 'text_length_dist.png')
+BERT_TOP_TAGS_DIST_PATH = os.path.join(BERT_3TAGS_DIR, 'top_tags_distribution.png')
+BERT_SAMPLE_PRECISION_DIST_PATH = os.path.join(BERT_3TAGS_DIR, 'sample_precision_dist.png')
+BERT_TAG_FREQ_COMPARISON_PATH = os.path.join(BERT_3TAGS_DIR, 'tag_freq_comparison.png')
+BERT_TRAINING_METRICS_PATH = os.path.join(BERT_3TAGS_DIR, 'training_metrics.json')
+BERT_MODEL_CONFIG_PATH = os.path.join(BERT_3TAGS_DIR, 'model_config.json') 
