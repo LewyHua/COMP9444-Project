@@ -17,7 +17,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 from torch.nn.utils.rnn import pad_sequence
-from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_score
+from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_score, hamming_loss
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from collections import Counter
@@ -482,103 +482,156 @@ def train(model, train_loader, val_loader, criterion, optimizer, n_epochs=MAX_EP
     
     return model, best_val_f1, training_metrics
 
+def evaluate_multilabel(labels, preds):
+    """Calculate three key evaluation metrics for multilabel classification"""
+    # Calculate Micro-F1 score (treats all label instances as a whole)
+    micro_f1 = f1_score(labels, preds, average='micro', zero_division=0)
+    
+    # Calculate Tag Recall (proportion of tags correctly predicted by the model)
+    # Compute whether each tag can be recognized by the model (predicted at least once)
+    tag_recall = 0
+    tags_learned = 0
+    
+    # Count occurrences of each tag in true labels
+    true_tag_presence = np.sum(labels, axis=0) > 0
+    # Count occurrences of each tag in predictions
+    pred_tag_presence = np.sum(preds, axis=0) > 0
+    
+    # Check if each tag is correctly predicted at least once
+    correct_tag_predictions = np.zeros(labels.shape[1], dtype=bool)
+    for i in range(labels.shape[1]):
+        # For each tag, check if there are samples where both true and predicted labels are 1
+        tag_true_samples = labels[:, i] == 1
+        if np.any(tag_true_samples):
+            tag_correct_preds = np.logical_and(labels[:, i] == 1, preds[:, i] == 1)
+            correct_tag_predictions[i] = np.any(tag_correct_preds)
+    
+    # Total number of tags used in true labels
+    total_tags_used = np.sum(true_tag_presence)
+    # Number of tags correctly learned
+    tags_learned = np.sum(correct_tag_predictions)
+    # Tag recall rate
+    tag_recall = float(tags_learned) / float(total_tags_used) if total_tags_used > 0 else 0.0
+    
+    # Return a dictionary of the three metrics
+    return {
+        'micro_f1_score': float(micro_f1),
+        'tag_recall': float(tag_recall),
+        'tags_learned': int(tags_learned),
+        'total_tags_used': int(total_tags_used)
+    }
+
 def evaluate(model, data_loader, criterion, tag_names, device):
-    """评估模型性能"""
+    """Evaluate model performance"""
     epoch_loss = 0
     all_preds = []
     all_labels = []
     all_probs = []
     
-    # 定义Top-k和最小概率阈值
-    MIN_PROB_THRESHOLD = 0.1  # 最小概率阈值，可调整
-    k = 3  # 选择前k个标签
+    # Define Top-k and minimum probability threshold
+    MIN_PROB_THRESHOLD = 0.1  # Minimum probability threshold, adjustable
+    k = 3  # Select top-k labels
     
-    # 设置模型为评估模式
+    # Set model to evaluation mode
     model.eval()
     
     with torch.no_grad():
         for batch in data_loader:
-            # 获取数据 - 确保batch作为元组处理
+            # Get data - make sure batch is handled as a tuple
             texts, labels = batch
             texts = texts.to(device)
             labels = labels.to(device)
             
-            # 获取预测
+            # Get predictions
             predictions = model(texts)
             
-            # 计算损失
+            # Calculate loss
             loss = criterion(predictions, labels)
             epoch_loss += loss.item()
             
-            # 应用sigmoid获取概率
+            # Apply sigmoid to get probabilities
             probs = torch.sigmoid(predictions)
             
-            # 方法1：使用阈值
+            # Method 1: Using threshold
             preds_threshold = (probs > PREDICTION_THRESHOLD).float()
             
-            # 方法2：Top-k + 最小概率阈值
-            # 获取Top-k的索引和概率值
+            # Method 2: Top-k + minimum probability threshold
+            # Get indices and probability values for Top-k
             top_probs, top_indices = torch.topk(probs, k=k, dim=1)
             
-            # 初始化预测矩阵
+            # Initialize prediction matrix
             preds_topk = torch.zeros_like(probs)
             
-            # 为每个样本填充符合条件的预测
+            # Fill in predictions for each sample that meet the criteria
             for i, (indices, values) in enumerate(zip(top_indices, top_probs)):
-                # 只保留概率超过阈值的标签
+                # Only keep labels with probability above threshold
                 valid_mask = values >= MIN_PROB_THRESHOLD
                 valid_indices = indices[valid_mask]
                 
-                # 将合格的标签设为1
+                # Set qualifying labels to 1
                 if len(valid_indices) > 0:
                     preds_topk[i, valid_indices] = 1.0
             
-            # 使用Top-k + 最小概率阈值方法的预测
+            # Use Top-k + minimum probability threshold method for predictions
             preds = preds_topk
             
-            # 收集预测和标签
+            # Collect predictions and labels
             all_preds.append(preds.cpu().numpy())
             all_labels.append(labels.cpu().numpy())
             all_probs.append(probs.cpu().numpy())
     
-    # 合并所有批次的结果
+    # Combine results from all batches
     all_preds = np.vstack(all_preds)
     all_labels = np.vstack(all_labels)
     all_probs = np.vstack(all_probs)
     
-    # 计算指标
+    # Calculate traditional metrics
     accuracy = accuracy_score(all_labels, all_preds)
     precision = precision_score(all_labels, all_preds, average='samples', zero_division=0)
     recall = recall_score(all_labels, all_preds, average='samples', zero_division=0)
     f1 = f1_score(all_labels, all_preds, average='samples', zero_division=0)
     
-    # 计算每个标签的指标
+    # Calculate per-label metrics
     per_label_f1 = f1_score(all_labels, all_preds, average=None, zero_division=0)
     per_label_precision = precision_score(all_labels, all_preds, average=None, zero_division=0)
     per_label_recall = recall_score(all_labels, all_preds, average=None, zero_division=0)
     per_label_support = np.sum(all_labels, axis=0)
     
-    # 打印整体评估指标
-    print(f"评估结果 (Top-{k} + 最小阈值={MIN_PROB_THRESHOLD}):")
-    print(f"准确率: {accuracy:.4f}")
-    print(f"精确率: {precision:.4f}")
-    print(f"召回率: {recall:.4f}")
-    print(f"F1分数: {f1:.4f}")
+    # Calculate multilabel evaluation metrics
+    multilabel_metrics = evaluate_multilabel(all_labels, all_preds)
+    micro_f1 = multilabel_metrics['micro_f1_score']
+    tag_recall = multilabel_metrics['tag_recall']
+    tags_learned = multilabel_metrics['tags_learned']
+    total_tags_used = multilabel_metrics['total_tags_used']
     
-    # 整理结果为字典格式
+    # Print overall evaluation metrics
+    print(f"Evaluation Results (Top-{k} + Min Threshold={MIN_PROB_THRESHOLD}):")
+    print(f"Exact Match Accuracy: {accuracy:.4f}")
+    print(f"Sample Precision: {precision:.4f}")
+    print(f"Sample Recall: {recall:.4f}")
+    print(f"Sample F1 Score: {f1:.4f}")
+    print(f"Micro-F1 Score: {micro_f1:.4f}")
+    print(f"Tag Recall: {tag_recall:.4f} ({tags_learned}/{total_tags_used} tags learned)")
+    
+    # Organize results as a dictionary
     performance = {
         'loss': epoch_loss / len(data_loader),
         'accuracy': float(accuracy),
         'precision': float(precision),
         'recall': float(recall),
         'f1': float(f1),
+        'micro_f1': float(micro_f1),
+        'tag_recall': float(tag_recall),
+        'tags_learned': int(tags_learned),
+        'total_tags_used': int(total_tags_used),
+        'multilabel_metrics': multilabel_metrics,  # Add combined metrics
         'per_label': {},
         'prediction_method': 'top_k_with_threshold',
         'k_value': k,
         'min_threshold': MIN_PROB_THRESHOLD
     }
     
-    # 添加每个标签的性能指标
+    # Add performance metrics for each label
     for i, tag in enumerate(tag_names):
         performance['per_label'][tag] = {
             'precision': float(per_label_precision[i]),
@@ -589,59 +642,65 @@ def evaluate(model, data_loader, criterion, tag_names, device):
     
     return performance, (all_labels, all_preds)
 
-def plot_top_tags_performance(evaluation_results, top_n=20):
-    """绘制标签性能柱状图"""
-    # 提取标签F1分数
+def plot_top_tags_performance(evaluation_results, top_n=20, save_path=None):
+    """Plot bar chart for tag performance"""
+    # Extract label F1 scores
     per_label = evaluation_results['per_label']
     
-    # 准备数据
+    # Prepare data
     tags = []
     f1_scores = []
     supports = []
     
-    # 按F1分数排序
+    # Sort by F1 score
     sorted_tags = sorted(
         per_label.items(), 
         key=lambda x: x[1]['f1'], 
         reverse=True
     )
     
-    # 选择前N个标签
+    # Select top N tags
     for tag, metrics in sorted_tags[:top_n]:
         tags.append(tag)
         f1_scores.append(metrics['f1'])
         supports.append(metrics['support'])
     
-    # 创建图表
+    # Create chart
     fig, ax = plt.subplots(figsize=(14, 8))
     
-    # 设置x轴位置
+    # Set x-axis positions
     x = np.arange(len(tags))
     
-    # 绘制柱状图
+    # Draw bar chart
     bars = ax.bar(x, f1_scores, width=0.6)
     
-    # 为每个柱添加标签
+    # Add labels to each bar
     for i, bar in enumerate(bars):
         height = bar.get_height()
         ax.text(bar.get_x() + bar.get_width()/2., height + 0.01,
                 f'Support: {supports[i]}', ha='center', va='bottom', rotation=0)
     
-    # 设置标题和标签
+    # Set title and labels
     ax.set_title(f'Top {top_n} Tags Performance (F1 Score)', fontsize=15)
     ax.set_xlabel('Tags', fontsize=12)
     ax.set_ylabel('F1 Score', fontsize=12)
     ax.set_xticks(x)
     ax.set_xticklabels(tags)
     
-    # 旋转x轴标签
+    # Rotate x-axis labels
     plt.xticks(rotation=45, ha='right')
     
-    # 调整布局
+    # Adjust layout
     plt.tight_layout()
     
-    # 保存图表
-    plt.savefig(BILSTM_TOP_TAGS_PERFORMANCE_PATH)
+    # Save chart if path is provided
+    if save_path:
+        plt.savefig(save_path, dpi=300, bbox_inches='tight')
+        print(f"Top tags performance chart saved to: {save_path}")
+    else:
+        plt.savefig(BILSTM_3TAGS_TOP_TAGS_PATH, dpi=300, bbox_inches='tight')
+        print(f"Top tags performance chart saved to: {BILSTM_3TAGS_TOP_TAGS_PATH}")
+    
     plt.close()
 
 def save_model_and_results(model, word_to_idx, val_evaluation, test_evaluation):
@@ -666,30 +725,122 @@ def save_model_and_results(model, word_to_idx, val_evaluation, test_evaluation):
     
     print(f"模型和结果已保存到: {OUTPUT_DIR}")
 
+def plot_new_metrics(val_metrics, test_metrics, save_path):
+    """Plot visualization for the new evaluation metrics"""
+    # Prepare data
+    metrics = ['micro_f1_score', 'tag_recall']
+    metric_names = ['Micro-F1 Score', 'Tag Recall']
+    
+    val_values = [val_metrics[m] for m in metrics]
+    test_values = [test_metrics[m] for m in metrics]
+    
+    # Create chart
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
+    
+    # First subplot: Comparison of Micro-F1 and Tag Recall
+    x = np.arange(len(metrics))
+    width = 0.35
+    
+    rects1 = ax1.bar(x - width/2, val_values, width, label='Validation Set', color='steelblue')
+    rects2 = ax1.bar(x + width/2, test_values, width, label='Test Set', color='lightcoral')
+    
+    # Set labels and title for the first subplot
+    ax1.set_title('Evaluation Metrics Comparison', fontsize=14)
+    ax1.set_ylabel('Score', fontsize=12)
+    ax1.set_xticks(x)
+    ax1.set_xticklabels(metric_names, fontsize=12)
+    ax1.legend()
+    
+    # Add labels to the bar chart
+    def autolabel(rects):
+        for rect in rects:
+            height = rect.get_height()
+            ax1.annotate(f'{height:.4f}',
+                        xy=(rect.get_x() + rect.get_width() / 2, height),
+                        xytext=(0, 3),
+                        textcoords="offset points",
+                        ha='center', va='bottom')
+    
+    autolabel(rects1)
+    autolabel(rects2)
+    
+    # Second subplot: Tags Learned vs Total Tags
+    tags_data = [
+        val_metrics['tags_learned'], 
+        val_metrics['total_tags_used'] - val_metrics['tags_learned'],
+        test_metrics['tags_learned'],
+        test_metrics['total_tags_used'] - test_metrics['tags_learned']
+    ]
+    
+    labels = ['Learned', 'Not Learned']
+    x_labels = ['Validation Set', 'Test Set']
+    
+    x2 = np.arange(len(x_labels))
+    width2 = 0.35
+    
+    ax2.bar(x2, [val_metrics['tags_learned'], test_metrics['tags_learned']], 
+            width2, label='Tags Learned', color='forestgreen')
+    ax2.bar(x2, [val_metrics['total_tags_used'] - val_metrics['tags_learned'], 
+                test_metrics['total_tags_used'] - test_metrics['tags_learned']], 
+            width2, bottom=[val_metrics['tags_learned'], test_metrics['tags_learned']], 
+            label='Tags Not Learned', color='lightgray')
+    
+    # Set labels and title for the second subplot
+    ax2.set_title('Tag Learning Status', fontsize=14)
+    ax2.set_ylabel('Number of Tags', fontsize=12)
+    ax2.set_xticks(x2)
+    ax2.set_xticklabels(x_labels, fontsize=12)
+    ax2.legend()
+    
+    # Add percentage labels to the stacked bar chart
+    for i, x_pos in enumerate(x2):
+        total = val_metrics['total_tags_used'] if i == 0 else test_metrics['total_tags_used']
+        learned = val_metrics['tags_learned'] if i == 0 else test_metrics['tags_learned']
+        percentage = learned / total * 100 if total > 0 else 0
+        
+        ax2.text(x_pos, total/2, f'{percentage:.1f}%', 
+                ha='center', va='center', fontweight='bold')
+        
+        # Add specific numbers
+        ax2.text(x_pos, total + 1, f'{learned}/{total}', 
+                ha='center', va='bottom')
+    
+    # Beautify the chart
+    for ax in [ax1, ax2]:
+        ax.grid(axis='y', linestyle='--', alpha=0.7)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+    
+    # Adjust layout and save
+    fig.tight_layout()
+    plt.savefig(save_path, dpi=300, bbox_inches='tight')
+    plt.close()
+    print(f"Evaluation metrics comparison chart saved to: {save_path}")
+
 def main():
-    """主函数"""
-    print("="*80)
-    print("开始训练BiLSTM电影类型分类模型 (基于论文实现)")
-    print("="*80)
-    print(f"训练结果将保存到: {BILSTM_3TAGS_DIR}")
-    print(f"设置固定训练{MAX_EPOCHS}个epoch")
+    """Main function"""
+    print("\n========== Starting BiLSTM Movie Genre Classification Model Training (Based on Paper Implementation) ==========")
+    start_time = time.time()
+    print(f"Training results will be saved to: {BILSTM_3TAGS_DIR}")
+    print(f"Set to train for {MAX_EPOCHS} epochs")
     
-    # 加载数据
+    # Load data
     data = load_data()
+    valid_tags = data['valid_tags']
     
-    # 构建词汇表
+    # Build vocabulary
     vocab, word_to_idx = build_vocabulary(data['X_train'])
     
-    # 统计标签分布
+    # Statistics on label distribution
     label_counts = np.sum(data['y_train'], axis=0)
-    label_dist = [(data['valid_tags'][i], count) for i, count in enumerate(label_counts)]
+    label_dist = [(valid_tags[i], count) for i, count in enumerate(label_counts)]
     label_dist.sort(key=lambda x: x[1], reverse=True)
     
-    print("\n标签分布 (前20个):")
+    print("\nLabel Distribution (Top 20):")
     for tag, count in label_dist[:20]:
         print(f"{tag}: {count} ({count/len(data['y_train'])*100:.2f}%)")
     
-    # 可视化标签分布
+    # Visualize label distribution
     plt.figure(figsize=(12, 6))
     top_tags = [tag for tag, _ in label_dist[:20]]
     top_counts = [count for _, count in label_dist[:20]]
@@ -699,51 +850,53 @@ def main():
     plt.ylabel('Count')
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
-    plt.savefig(os.path.join(BILSTM_3TAGS_DIR, 'top_tags_distribution.png'))
+    tags_dist_path = os.path.join(BILSTM_3TAGS_DIR, 'top_tags_distribution.png')
+    plt.savefig(tags_dist_path, dpi=300, bbox_inches='tight')
     plt.close()
+    print(f"Top tags distribution chart saved to: {tags_dist_path}")
     
-    # 计算类别不平衡权重
+    # Calculate class imbalance weights
     pos_weights = torch.tensor(
         [len(data['y_train']) / max(1, count) for count in label_counts],
         dtype=torch.float
     )
     
-    # 创建数据集
+    # Create datasets
     train_dataset = MovieDataset(data['X_train'], data['y_train'], word_to_idx)
     val_dataset = MovieDataset(data['X_val'], data['y_val'], word_to_idx)
     test_dataset = MovieDataset(data['X_test'], data['y_test'], word_to_idx)
     
-    # 创建数据加载器
+    # Create data loaders
     train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, collate_fn=collate_fn)
     val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, collate_fn=collate_fn)
     test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, collate_fn=collate_fn)
     
-    # 设置模型参数
+    # Set model parameters
     vocab_size = len(vocab)
-    output_dim = len(data['valid_tags'])
+    output_dim = len(valid_tags)
     
-    # 创建模型
+    # Create model
     model = BiLSTMWithAttention(vocab_size, EMBEDDING_DIM, HIDDEN_DIM, output_dim, N_LAYERS, DROPOUT)
     model = model.to(device)
     
-    # 打印模型结构
-    print("\n模型结构:")
+    # Print model structure
+    print("\nModel Structure:")
     print(model)
     
-    # 计算模型参数数量
+    # Calculate number of model parameters
     total_params = sum(p.numel() for p in model.parameters())
     trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    print(f"\n总参数数量: {total_params:,}")
-    print(f"可训练参数数量: {trainable_params:,}")
+    print(f"\nTotal Parameters: {total_params:,}")
+    print(f"Trainable Parameters: {trainable_params:,}")
     
-    # 设置损失函数和优化器
-    # 使用带权重的BCE损失函数来处理类别不平衡
+    # Set loss function and optimizer
+    # Use weighted BCE loss to handle class imbalance
     criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weights.to(device))
     
-    # 使用Adam优化器
+    # Use Adam optimizer
     optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE, weight_decay=WEIGHT_DECAY)
     
-    # 保存模型配置
+    # Save model configuration
     model_config = {
         'vocab_size': vocab_size,
         'embedding_dim': EMBEDDING_DIM,
@@ -760,47 +913,68 @@ def main():
         'trainable_params': trainable_params,
     }
     
-    with open(os.path.join(BILSTM_3TAGS_DIR, 'model_config.json'), 'w') as f:
+    model_config_path = os.path.join(BILSTM_3TAGS_DIR, 'model_config.json')
+    with open(model_config_path, 'w') as f:
         json.dump(model_config, f, indent=2)
+    print(f"Model configuration saved to: {model_config_path}")
     
-    # 训练模型
+    # Train model
     model, best_val_f1, training_metrics = train(model, train_loader, val_loader, criterion, optimizer)
     
-    # 评估验证集
-    print("\n在验证集上评估模型...")
-    val_evaluation, _ = evaluate(model, val_loader, criterion, data['valid_tags'], device)
+    # Evaluate validation set
+    print("\nEvaluating model on validation set...")
+    val_evaluation, (val_labels, val_preds) = evaluate(model, val_loader, criterion, valid_tags, device)
     
-    # 评估测试集
-    print("\n在测试集上评估模型...")
-    test_evaluation, _ = evaluate(model, test_loader, criterion, data['valid_tags'], device)
+    # Display multilabel evaluation metrics for validation set
+    print("\nValidation Set Multilabel Evaluation Metrics:")
+    print(f"Micro-F1 Score: {val_evaluation['multilabel_metrics']['micro_f1_score']:.4f} - Treats all label instances as a whole")
+    print(f"Tag Recall: {val_evaluation['multilabel_metrics']['tag_recall']:.4f} - Proportion of tags correctly predicted by the model")
+    print(f"Tags Learned: {val_evaluation['multilabel_metrics']['tags_learned']}/{val_evaluation['multilabel_metrics']['total_tags_used']} - Number of tags the model can correctly predict")
     
-    # 绘制标签性能
-    plot_top_tags_performance(val_evaluation)
+    # Evaluate test set
+    print("\nEvaluating model on test set...")
+    test_evaluation, (test_labels, test_preds) = evaluate(model, test_loader, criterion, valid_tags, device)
     
-    # 加载并评估最差模型
-    print("\n加载并评估最差模型...")
-    worst_checkpoint = torch.load(BILSTM_WORST_MODEL_PATH)
-    model.load_state_dict(worst_checkpoint['model_state_dict'])
-    worst_val_evaluation, _ = evaluate(model, val_loader, criterion, data['valid_tags'], device)
+    # Display multilabel evaluation metrics for test set
+    print("\nTest Set Multilabel Evaluation Metrics:")
+    print(f"Micro-F1 Score: {test_evaluation['multilabel_metrics']['micro_f1_score']:.4f} - Treats all label instances as a whole")
+    print(f"Tag Recall: {test_evaluation['multilabel_metrics']['tag_recall']:.4f} - Proportion of tags correctly predicted by the model")
+    print(f"Tags Learned: {test_evaluation['multilabel_metrics']['tags_learned']}/{test_evaluation['multilabel_metrics']['total_tags_used']} - Number of tags the model can correctly predict")
     
-    # 再次加载最佳模型进行最终保存
+    # Plot tag performance
+    top_tags_path = os.path.join(BILSTM_3TAGS_DIR, 'top_tags_performance.png')
+    plot_top_tags_performance(val_evaluation, save_path=top_tags_path)
+    
+    # Plot new evaluation metrics
+    new_metrics_plot_path = os.path.join(BILSTM_3TAGS_DIR, 'evaluation_metrics.png')
+    plot_new_metrics(
+        val_evaluation['multilabel_metrics'], 
+        test_evaluation['multilabel_metrics'],
+        new_metrics_plot_path
+    )
+    
+    # Save best model and results
     best_checkpoint = torch.load(BILSTM_BEST_MODEL_PATH)
     model.load_state_dict(best_checkpoint['model_state_dict'])
     
-    # 保存模型和结果
+    # Save model and results
     results = {
         'model_type': 'bilstm_3tags',
         'best_validation': val_evaluation,
-        'worst_validation': worst_val_evaluation,
         'test': test_evaluation,
         'training_metrics': training_metrics,
+        'multilabel_metrics_comparison': {
+            'best_validation': val_evaluation['multilabel_metrics'],
+            'test': test_evaluation['multilabel_metrics']
+        },
         'model_config': model_config,
         'timestamp': time.strftime('%Y-%m-%d %H:%M:%S')
     }
     
-    # 保存为JSON
-    with open(BILSTM_3TAGS_RESULTS_PATH, 'w') as f:
-        # 处理numpy类型
+    # Save as JSON
+    results_path = os.path.join(BILSTM_3TAGS_DIR, 'results.json')
+    with open(results_path, 'w') as f:
+        # Handle numpy types
         def convert_to_serializable(obj):
             if isinstance(obj, (np.int64, np.int32, np.int16, np.int8)):
                 return int(obj)
@@ -818,17 +992,16 @@ def main():
         serializable_results = convert_to_serializable(results)
         json.dump(serializable_results, f, indent=2)
     
-    print(f"\nBiLSTM模型训练和评估完成! 所有结果已保存到 {BILSTM_3TAGS_DIR}")
-    print(f"最佳模型: {BILSTM_BEST_MODEL_PATH}")
-    print(f"最差模型: {BILSTM_WORST_MODEL_PATH}")
-    print(f"结果JSON: {BILSTM_3TAGS_RESULTS_PATH}")
+    print(f"\nBiLSTM model training and evaluation complete! All results saved to {BILSTM_3TAGS_DIR}")
+    print(f"Best model: {BILSTM_BEST_MODEL_PATH}")
+    print(f"Results JSON: {results_path}")
     
-    # 总结最佳与最差模型的对比
-    print("\n最佳与最差模型对比:")
-    print(f"最佳模型 - Epoch: {best_checkpoint['epoch']}, Val F1: {best_checkpoint['val_f1']:.4f}")
-    print(f"最差模型 - Epoch: {worst_checkpoint['epoch']}, Val F1: {worst_checkpoint['val_f1']:.4f}")
+    # Calculate total execution time
+    total_time = time.time() - start_time
+    print(f"\nTotal execution time: {total_time:.2f} seconds ({total_time/60:.2f} minutes)")
     
     return model, results
 
 if __name__ == "__main__":
     main() 
+  

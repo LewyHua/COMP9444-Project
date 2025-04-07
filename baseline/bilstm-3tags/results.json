@@ -6,6 +6,16 @@
     "precision": 0.13962635201573254,
     "recall": 0.18143812231846254,
     "f1": 0.13818439139201352,
+    "micro_f1": 0.14196957794758266,
+    "tag_recall": 0.7941176470588235,
+    "tags_learned": 54,
+    "total_tags_used": 68,
+    "multilabel_metrics": {
+      "micro_f1_score": 0.14196957794758266,
+      "tag_recall": 0.7941176470588235,
+      "tags_learned": 54,
+      "total_tags_used": 68
+    },
     "per_label": {
       "atmospheric": {
         "precision": 0.06153846153846154,
@@ -420,432 +430,22 @@
     "k_value": 3,
     "min_threshold": 0.1
   },
-  "worst_validation": {
-    "loss": 1.300118743578593,
-    "accuracy": 0.0012642225031605564,
-    "precision": 0.2612726506531816,
-    "recall": 0.31689556111109646,
-    "f1": 0.25010524631365516,
-    "per_label": {
-      "atmospheric": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 62
-      },
-      "cult": {
-        "precision": 0.21631205673758866,
-        "recall": 0.2791762013729977,
-        "f1": 0.24375624375624375,
-        "support": 437
-      },
-      "gothic": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 63
-      },
-      "horror": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 79
-      },
-      "murder": {
-        "precision": 0.38720981165133594,
-        "recall": 0.9546436285097192,
-        "f1": 0.5509504518541601,
-        "support": 926
-      },
-      "violence": {
-        "precision": 0.30609896432681244,
-        "recall": 0.7835051546391752,
-        "f1": 0.4402151427389326,
-        "support": 679
-      },
-      "romantic": {
-        "precision": 0.2183288409703504,
-        "recall": 0.54,
-        "f1": 0.31094049904030713,
-        "support": 450
-      },
-      "feel-good": {
-        "precision": 0.005509641873278237,
-        "recall": 0.2222222222222222,
-        "f1": 0.010752688172043012,
-        "support": 9
-      },
-      "inspiring": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 17
-      },
-      "stupid": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 35
-      },
-      "action": {
-        "precision": 0.10596026490066225,
-        "recall": 0.1415929203539823,
-        "f1": 0.12121212121212122,
-        "support": 113
-      },
-      "cruelty": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 63
-      },
-      "dramatic": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 61
-      },
-      "revenge": {
-        "precision": 0.26666666666666666,
-        "recall": 0.010526315789473684,
-        "f1": 0.020253164556962026,
-        "support": 380
-      },
-      "sadist": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 92
-      },
-      "flashback": {
-        "precision": 0.1643835616438356,
-        "recall": 0.08,
-        "f1": 0.10762331838565023,
-        "support": 450
-      },
-      "queer": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 18
-      },
-      "mystery": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 59
-      },
-      "suspenseful": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 164
-      },
-      "neo noir": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 107
-      },
-      "prank": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 55
-      },
-      "psychedelic": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 296
-      },
-      "tragedy": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 96
-      },
-      "home movie": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 30
-      },
-      "good versus evil": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 139
-      },
-      "depressing": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 30
-      },
-      "realism": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 32
-      },
-      "boring": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 74
-      },
-      "haunting": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 24
-      },
-      "sentimental": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 26
-      },
-      "paranormal": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 90
-      },
-      "historical": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 31
-      },
-      "storytelling": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 60
-      },
-      "comedy": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 291
-      },
-      "fantasy": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 98
-      },
-      "philosophical": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 29
-      },
-      "adult comedy": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 23
-      },
-      "cute": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 33
-      },
-      "entertaining": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 122
-      },
-      "bleak": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 30
-      },
-      "humor": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 136
-      },
-      "plot twist": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 23
-      },
-      "pornographic": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 24
-      },
-      "brainwashing": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 18
-      },
-      "insanity": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 97
-      },
-      "science fiction": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 54
-      },
-      "claustrophobic": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 17
-      },
-      "dark": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 65
-      },
-      "psychological": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 40
-      },
-      "melodrama": {
-        "precision": 0.03307086614173228,
-        "recall": 0.2727272727272727,
-        "f1": 0.05898876404494382,
-        "support": 77
-      },
-      "absurd": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 44
-      },
-      "historical fiction": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 24
-      },
-      "satire": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 131
-      },
-      "alternate history": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 15
-      },
-      "alternate reality": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 36
-      },
-      "comic": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 23
-      },
-      "grindhouse film": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 11
-      },
-      "thought-provoking": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 19
-      },
-      "clever": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 13
-      },
-      "western": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 11
-      },
-      "blaxploitation": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 9
-      },
-      "whimsical": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 8
-      },
-      "intrigue": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 24
-      },
-      "allegory": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 28
-      },
-      "anti war": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 17
-      },
-      "avant garde": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 32
-      },
-      "suicidal": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 7
-      },
-      "magical realism": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 8
-      }
-    },
-    "prediction_method": "top_k_with_threshold",
-    "k_value": 3,
-    "min_threshold": 0.1
-  },
   "test": {
     "loss": 3.8339915096118884,
     "accuracy": 0.0013486176668914363,
     "precision": 0.13531130591144078,
     "recall": 0.17031803496020503,
     "f1": 0.1312715282180989,
+    "micro_f1": 0.13454017208626662,
+    "tag_recall": 0.8382352941176471,
+    "tags_learned": 57,
+    "total_tags_used": 68,
+    "multilabel_metrics": {
+      "micro_f1_score": 0.13454017208626662,
+      "tag_recall": 0.8382352941176471,
+      "tags_learned": 57,
+      "total_tags_used": 68
+    },
     "per_label": {
       "atmospheric": {
         "precision": 0.06976744186046512,
@@ -1376,6 +976,20 @@
     "worst_epoch": 3,
     "worst_val_f1": 0.07951052847166055
   },
+  "multilabel_metrics_comparison": {
+    "best_validation": {
+      "micro_f1_score": 0.14196957794758266,
+      "tag_recall": 0.7941176470588235,
+      "tags_learned": 54,
+      "total_tags_used": 68
+    },
+    "test": {
+      "micro_f1_score": 0.13454017208626662,
+      "tag_recall": 0.8382352941176471,
+      "tags_learned": 57,
+      "total_tags_used": 68
+    }
+  },
   "model_config": {
     "vocab_size": 30000,
     "embedding_dim": 300,
@@ -1391,5 +1005,5 @@
     "total_params": 9877509,
     "trainable_params": 9877509
   },
-  "timestamp": "2025-04-07 17:05:42"
+  "timestamp": "2025-04-07 21:28:44"
 }
